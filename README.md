@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tastypie
+# tastypie <img src="man/figures/logo_will.png" align="right" width="200" />
 
 <!-- badges: start -->
 
@@ -11,50 +11,107 @@ status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.o
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-You only need to type “why pie charts are bad” on Google to find
+You only need to type *“why pie charts are bad”* on
+[Google](https://www.google.com/search?q=why+pie+charts+are+bad) to find
 thousands of articles full of (very valid) reasons why this type of
 chart should not be used.  
 **However**, my mother, a high school teacher of Latin and Italian
 literature, swears she understands more from something like this:
 
-``` r
-pie<- ggplot(df, aes(x="", y=value, fill=group))+
-  geom_bar(width = 1, stat = "identity")+
-  coord_polar("y", start=0) # to be replaced by a function from the package
-pie
-```
-
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="60%" height="60%" style="display: block; margin: auto;" />
 
 than from something like this:
 
-``` r
-kable(df)
-```
+<table>
 
-| group    | value |
-| :------- | ----: |
-| My mum   |    20 |
-| Is       |    30 |
-| Strange? |    50 |
+<thead>
 
-Now, I love my mum, and I want her to be happy. And maybe there are
-other people in the world in this *situation*, so, why not helping?
+<tr>
 
-Easy pie charts\!  
-Just a wrapper for [ggplot2](https://ggplot2.tidyverse.org/) functions
-for making pie charts in an easier way.
+<th style="text-align:left;">
+
+InYourOpinion
+
+</th>
+
+<th style="text-align:right;">
+
+value
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+My mum
+
+</td>
+
+<td style="text-align:right;">
+
+20
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Is
+
+</td>
+
+<td style="text-align:right;">
+
+30
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Strange?
+
+</td>
+
+<td style="text-align:right;">
+
+50
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Now, I love my mum, and I want her to be happy. Maybe there are other
+people in the world with this *particular problem*, so, why not help?  
+Due to the little use due to the reasons that have already been
+presented, making pie charts in R is not immediate, so it is necessary
+to create functions to simplify things.
+
+In this R package there are useful functions for making **tasty pies**
+facilitating the use of functions already present in
+[ggplot2](https://ggplot2.tidyverse.org/).
 
 ## Installation
 
-You can install the released version of tastypie from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("tastypie")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
