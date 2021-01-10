@@ -46,4 +46,7 @@ pie_datacheck <- function(data, check = FALSE){
   if(check){
     message("Your dataframe is ready for making tasty pies :)")
   }
+  if(dim(data)[1] > 8){
+    warning("Maybe the number of groups is too high for an understable pie chart.")
+  }
 }
