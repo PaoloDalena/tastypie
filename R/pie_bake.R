@@ -11,8 +11,11 @@ pie_bake <- function(
   title = ""
   ){
 
-  # check if the data.frame is well built:
+  # useful checks:
   pie_datacheck(data)
+  if(!template %in% pie_template_list){
+    stop("\n The selected template does NOT exist. \n Type pie_template_list to see all the available templates.")
+  }
 
   # initial setup
   names(data) <- c("group", "value")
