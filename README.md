@@ -18,7 +18,7 @@ chart should not be used.
 **However**, my mother, a high school teacher of Latin and Italian
 literature, swears she understands more from something like this:
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="60%" height="60%" style="display: block; margin: auto;" />
+<img src="man/figures/pie_readme.png" width="60%" height="60%" style="display: block; margin: auto;" />
 
 than from something like this:
 

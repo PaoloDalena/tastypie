@@ -28,20 +28,11 @@ df <- data.frame(
   InYourOpinion = c("My mum", "Is", "Strange?"),
   value = c(20, 30, 50)
 )
-head(df)
-library(ggplot2)
 library(knitr)
-pie<- ggplot(df, aes(x="", y=value, fill=InYourOpinion))+
-  geom_bar(width = 1, stat = "identity")+
-  coord_polar("y", start=0)+
-  scale_fill_brewer(palette="BrBG")+
-  theme_minimal()+
-  theme(axis.text.x=element_blank())
-# to be replaced by a function from the package
 ```
 
 ```{r, echo=FALSE, out.width="60%", out.height="60%", fig.align = "center"}
-pie
+include_graphics("man/figures/pie_readme.png")
 ```
 
 than from something like this:
