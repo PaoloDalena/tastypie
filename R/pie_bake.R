@@ -1,8 +1,9 @@
 #' @importFrom magrittr %>%
 #' @importFrom dplyr mutate
 #' @importFrom dplyr arrange
-#' @importFrom ggplot2 ggplot
-#' @importFrom scales label_percent
+#' @importFrom dplyr desc
+#' @importFrom utils head
+#' @import ggplot2
 pie_bake <- function(
   data,
   template,
@@ -306,7 +307,7 @@ pie_bake <- function(
         coord_polar("y", start=0)+
         theme_void()+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))), size=5)+
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))), size=5)+
         ggtitle(title)+
         scale_fill_discrete(name = group_name)
     }
@@ -318,7 +319,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Set3", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))), size=5)
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))), size=5)
     }
     else if(template == "basic3"){
       ggplot(data_n, aes(x="", y=value, fill=data_n[,1])) +
@@ -328,7 +329,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Set2", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "white", family = "mono", fontface = "bold",size=5)
     }
     else if(template == "basic4"){
@@ -339,7 +340,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Paired", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "mono", fontface = "bold",size=5)
     }
     else if(template == "basic5"){
@@ -350,7 +351,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Accent", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "sans", fontface = "bold",size=5)
     }
     # * bw ----------
@@ -362,7 +363,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "white", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "bw2"){
@@ -373,7 +374,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "beige", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "bw3"){
@@ -384,7 +385,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "yellow", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "bw4"){
@@ -395,7 +396,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "chartreuse", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "bw5"){
@@ -406,7 +407,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "deeppink", family = "mono", fontface = "bold", size=5)
     }
     # * blue ------
@@ -418,7 +419,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "blue2"){
@@ -429,7 +430,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "darkorange", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "blue3"){
@@ -440,7 +441,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "antiquewhite4", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "blue4"){
@@ -451,7 +452,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "cyan4", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "blue5"){
@@ -462,7 +463,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "deeppink", family = "mono", fontface = "bold", size=5)
     }
     # * red ------
@@ -474,7 +475,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "red2"){
@@ -485,7 +486,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "blue4", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "red3"){
@@ -496,7 +497,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "red4"){
@@ -507,7 +508,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "aquamarine2", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "red5"){
@@ -518,7 +519,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "darkviolet", family = "mono", fontface = "bold", size=5)
     }
     # * rainbow ---------
@@ -530,7 +531,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "rainbow2"){
@@ -541,7 +542,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "darkorange", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "rainbow3"){
@@ -552,7 +553,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "rainbow4"){
@@ -563,7 +564,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "darkslategray", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "rainbow5"){
@@ -574,7 +575,7 @@ pie_bake <- function(
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = label_percent(accuracy = 1)(value/sum(value))),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "darkviolet", family = "mono", fontface = "bold", size=5)
     }
     # * donut------
@@ -592,7 +593,7 @@ pie_bake <- function(
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         ggtitle(title)+
         geom_text( x=3.5, aes(y=labelPosition,
-                               label=label_percent(accuracy = 1)(value/sum(value))),
+                               label=scales::label_percent(accuracy = 1)(value/sum(value))),
                    color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "donut2"){
@@ -609,7 +610,7 @@ pie_bake <- function(
         scale_fill_brewer(palette = "Accent", name = group_name)+
         ggtitle(title)+
         geom_text( x=3.5, aes(y=labelPosition,
-                              label=label_percent(accuracy = 1)(value/sum(value))),
+                              label=scales::label_percent(accuracy = 1)(value/sum(value))),
                    color = "black", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "donut3"){
@@ -626,7 +627,7 @@ pie_bake <- function(
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         ggtitle(title)+
         geom_text( x=3.5, aes(y=labelPosition,
-                              label=label_percent(accuracy = 1)(value/sum(value))),
+                              label=scales::label_percent(accuracy = 1)(value/sum(value))),
                    color = "blue4", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "donut4"){
@@ -643,7 +644,7 @@ pie_bake <- function(
         scale_fill_brewer(palette = "Blues", name = group_name)+
         ggtitle(title)+
         geom_text( x=3.5, aes(y=labelPosition,
-                              label=label_percent(accuracy = 1)(value/sum(value))),
+                              label=scales::label_percent(accuracy = 1)(value/sum(value))),
                    color = "darkorange1", family = "mono", fontface = "bold", size=5)
     }
     else if(template == "donut5"){
@@ -660,7 +661,7 @@ pie_bake <- function(
         scale_fill_grey(name = group_name)+
         ggtitle(title)+
         geom_text( x=3.5, aes(y=labelPosition,
-                              label=label_percent(accuracy = 1)(value/sum(value))),
+                              label=scales::label_percent(accuracy = 1)(value/sum(value))),
                    color = "white", family = "mono", fontface = "bold", size=5)
     }
   }

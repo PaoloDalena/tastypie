@@ -16,14 +16,14 @@
 #'
 #' \dontrun{
 #' wrong <- c(1, 2, 3)
-#' pie_datacheck(wrong) # returns an error
+#' pie_datacheck(wrong) # Error
 #'
 #' wrong2 <- data.frame("a" = c(1, 2, 3), "b" = c("ex", "am", "ple"))
-#' pie_datacheck(wrong2) # returns an error
+#' pie_datacheck(wrong2) # Error
 #'
 #' right <- data.frame("a" = c("ex", "am", "ple"), "b" = c(1, 2, 3))
-#' pie_datacheck(right) # returns nothing ==> OK!
-#' pie_datacheck(right, check = T) # returns a positive message}
+#' pie_datacheck(right) # No Error ==> OK!
+#' pie_datacheck(right, check = T) # Positive message}
 #'
 
 pie_datacheck <- function(data, check = FALSE){
