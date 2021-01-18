@@ -31,7 +31,7 @@ df <- data.frame(
 library(knitr)
 ```
 
-```{r, echo=FALSE, out.width="60%", out.height="60%", fig.align = "center"}
+```{r, echo=FALSE, out.width="75%", out.height="75%", fig.align = "center"}
 include_graphics("man/figures/pie_readme.png")
 ```
 
