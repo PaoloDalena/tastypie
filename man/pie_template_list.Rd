@@ -3,7 +3,7 @@
 \docType{data}
 \name{pie_template_list}
 \alias{pie_template_list}
-\title{Available templates in \code{tastypie}.}
+\title{Available templates in \code{tastypie} for \code{pie_bake}.}
 \format{
 An object of class \code{character} of length 30.
 }
@@ -11,7 +11,9 @@ An object of class \code{character} of length 30.
 pie_template_list
 }
 \description{
-The vector containing all the available templates for pie charts for the \code{tastypie}
-package.
+The vector containing all the available templates for pie charts for the
+\code{\link{pie_bake}} function.
+Other more complex templates are available in \code{\link{pie_template_list_pro}}
+that can be used through the \code{\link{pie_bake_pro}} function.
 }
 \keyword{datasets}
