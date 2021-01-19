@@ -11,13 +11,18 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(badger)
+library(knitr)
 ```
 
 # tastypie <img src="man/figures/logo.png" align="right" width="200" />
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+`r badge_lifecycle("maturing", "blue")`
+`r badge_devel("PaoloDalena/tastypie", "green")`
+`r badge_license("GPL-3", "yellow")`
+`r badge_code_size("PaoloDalena/tastypie")`
 <!-- badges: end -->
 
 You only need to type *"why pie charts are bad"* on [Google](https://www.google.com/search?q=why+pie+charts+are+bad) to find thousands of articles full of (very valid) reasons why this type of chart should not be used.  
@@ -28,7 +33,6 @@ df <- data.frame(
   InYourOpinion = c("My mum", "Is", "Strange?"),
   value = c(20, 30, 50)
 )
-library(knitr)
 ```
 
 ```{r, echo=FALSE, out.width="75%", out.height="75%", fig.align = "center"}
