@@ -1,3 +1,20 @@
+#' Discover templates for \code{tastypie}
+#'
+#' This function allows to user to find out a random combination of templates,
+#' number of groups and features in order to get an idea of the many available
+#' plots in the package \code{tastypie}.
+#'
+#' @param which Allows to select a subset of the available templates. \cr
+#' \cr
+#' If \code{"all"}, the template is randomly chosen among all the available ones. \cr
+#' If \code{"bake"}, the template is randomly chosen among the ones that can be used
+#' through \code{\link{pie_bake}}.\cr
+#' If \code{"pro"}, the template is randomly chosen among the (more complex) ones
+#' that can be used through \code{\link{pie_bake_pro}}.\cr
+#' \cr
+#' The default value is \code{"all"}.
+#'
+#' @export
 pie_discover <- function(
   which = c("all", "bake", "pro")
 ){
