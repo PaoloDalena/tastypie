@@ -14,8 +14,15 @@ pie_bake <- function(
 
   # useful checks:
   pie_datacheck(data)
-  if(!template %in% pie_template_list){
-    stop("\n The selected template does NOT exist. \n Type pie_template_list to see all the available templates.")
+  if(template %in% pie_template_list_pro){
+    stop("\n The selected template must be used with the function pie_bake_pro().
+ Type pie_template_list to see all the available templates for this function.
+ Type pie_template_list_pro to see all the available templates for the function pie_bake_pro().")
+  }
+  else if(!template %in% pie_template_list){
+    stop("\n The selected template does NOT exist.
+ Type pie_template_list to see all the available templates for this function.
+ Type pie_template_list_pro to see all the available templates for the function pie_bake_pro().")
   }
 
   # initial setup

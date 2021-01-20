@@ -7,6 +7,17 @@ pie_bake_pro <- function(
 
   # useful checks:
   pie_datacheck(data)
+  if(template %in% pie_template_list){
+    stop("\n The selected template must be used with the function pie_bake().
+ Type pie_template_list_pro to see all the available templates for this function.
+ Type pie_template_list to see all the available templates for the function pie_bake().")
+  }
+  else if(!template %in% pie_template_list_pro){
+    stop("\n The selected template does NOT exist.
+ Type pie_template_list_pro to see all the available templates for this function.
+ Type pie_template_list to see all the available templates for the function pie_bake().")
+  }
+
   # initial setup
   names(data) <- c("group", "value")
   data_n <- arrange(data, desc(group))
