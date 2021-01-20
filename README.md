@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tastypie <img src="man/figures/logo.png" align="right" width="200" />
+# tastypie <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
@@ -39,7 +39,13 @@ InYourOpinion
 
 <th style="text-align:right;">
 
-value
+Value
+
+</th>
+
+<th style="text-align:right;">
+
+Proportion
 
 </th>
 
@@ -59,7 +65,13 @@ My mum
 
 <td style="text-align:right;">
 
-20
+60
+
+</td>
+
+<td style="text-align:right;">
+
+0.2
 
 </td>
 
@@ -75,7 +87,13 @@ Is
 
 <td style="text-align:right;">
 
-30
+90
+
+</td>
+
+<td style="text-align:right;">
+
+0.3
 
 </td>
 
@@ -91,7 +109,13 @@ Strange?
 
 <td style="text-align:right;">
 
-50
+150
+
+</td>
+
+<td style="text-align:right;">
+
+0.5
 
 </td>
 
@@ -103,13 +127,12 @@ Strange?
 
 Now, I love my mum, and I want her to be happy. Maybe there are other
 people in the world with this *particular problem*, so, why not help?  
-Due to the little use due to the reasons that have already been
-presented, making pie charts in R is not immediate, so it is necessary
-to create functions to simplify things.
+Due to the little use because of the already mentioned reasons, making
+pie (and related) charts in R is not straightforward, so it is necessary
+to have functions to simplify things.
 
 In this R package there are useful functions for making **tasty pies**
-facilitating the use of functions already present in
-[ggplot2](https://ggplot2.tidyverse.org/).
+exploiting some [ggplot2](https://ggplot2.tidyverse.org/) features.
 
 ## Installation
 
@@ -121,11 +144,83 @@ You can install the development version from
 devtools::install_github("PaoloDalena/tastypie")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+**`{tastypie}`** allows the user to easily create many different pie
+charts based on different templates.
+
+Using **`pie_bake()`** you just have to choose a template and if you
+want the proportions to be displayed in the plot or not (if you want,
+you can also set a title and a group name):
 
 ``` r
-library(tastypie)
-## basic example code
+example <- data.frame(
+  c("a. Is", "b. Not", "c. The", "d. Only", "e. One"),
+  c(2.9, 6.9, 4.20, 13.12, 6.66)
+)
+
+pie_bake(data = example, template = "red1", perc = TRUE,
+         title = "Perhaps", group_name = "She")
 ```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
+Or, if you want something more extravagant (*but probably less
+understandable*), choose a template and try **`pie_bake_pro()`**:
+
+``` r
+pie_bake_pro(data = example, template = "dart5",
+             title = "Perhaps", group_name = "She")
+```
+
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
+Not sure which template to choose? Run **`pie_discover()`** to find out
+a random combination of templates, number of groups and features and get
+an idea of the many available plots:
+
+``` r
+pie_discover()
+```
+
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
+Want to display an example of a particular template with particular
+features? Try **`pie_templates()`**:
+
+``` r
+pie_templates("eaten4", n_groups = 5)
+```
+
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
+Do you want a list of all the available templates? Check the
+**`pie_template_list`** and the **`pie_template_list_pro`** vectors\!
+
+``` r
+pie_template_list # to be used with pie_bake()
+#>  [1] "basic1"   "basic2"   "basic3"   "basic4"   "basic5"   "bw1"     
+#>  [7] "bw2"      "bw3"      "bw4"      "bw5"      "blue1"    "blue2"   
+#> [13] "blue3"    "blue4"    "blue5"    "red1"     "red2"     "red3"    
+#> [19] "red4"     "red5"     "rainbow1" "rainbow2" "rainbow3" "rainbow4"
+#> [25] "rainbow5" "donut1"   "donut2"   "donut3"   "donut4"   "donut5"
+
+pie_template_list_pro # to be used with pie_bake_pro()
+#>  [1] "eaten1"      "eaten2"      "eaten3"      "eaten4"      "eaten5"     
+#>  [6] "dart1"       "dart2"       "dart3"       "dart4"       "dart5"      
+#> [11] "eye1"        "eye2"        "eye3"        "eye4"        "eye5"       
+#> [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"
+```
+
+**Be curious, there are many tasty pies\!**
+
+## Feature request
+
+If you need some more features, please open an issue on
+[github](https://github.com/PaoloDalena/tastypie/issues).
+
+## Bug reports
+
+If you encounter a bug, please file a
+[reprex](https://github.com/tidyverse/reprex) (minimal reproducible
+example) on [github](https://github.com/PaoloDalena/tastypie/issues).

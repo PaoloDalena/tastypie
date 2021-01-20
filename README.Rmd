@@ -15,7 +15,7 @@ library(badger)
 library(knitr)
 ```
 
-# tastypie <img src="man/figures/logo.png" align="right" width="200" />
+# tastypie <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
@@ -31,7 +31,8 @@ You only need to type *"why pie charts are bad"* on [Google](https://www.google.
 ```{r,include=FALSE}
 df <- data.frame(
   InYourOpinion = c("My mum", "Is", "Strange?"),
-  value = c(20, 30, 50)
+  Value = c(60, 90, 150),
+  Proportion = c(60, 90, 150)/(60+90+150)
 )
 ```
 
@@ -46,9 +47,9 @@ kable(df, "html")
 ```
 
 Now, I love my mum, and I want her to be happy. Maybe there are other people in the world with this *particular problem*, so, why not help?  
-Due to the little use due to the reasons that have already been presented, making pie charts in R is not immediate, so it is necessary to create functions to simplify things.  
+Due to the little use because of the already mentioned reasons, making pie (and related) charts in R is not straightforward, so it is necessary to have functions to simplify things.  
   
-In this R package there are useful functions for making **tasty pies** facilitating the use of functions already present in [ggplot2](https://ggplot2.tidyverse.org/).
+In this R package there are useful functions for making **tasty pies** exploiting some [ggplot2](https://ggplot2.tidyverse.org/) features.
 
 ## Installation
 
@@ -59,12 +60,63 @@ You can install the development version from [GitHub](https://github.com/) with:
 devtools::install_github("PaoloDalena/tastypie")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example, eval = FALSE}
-library(tastypie)
-## basic example code
+```{r example, include=FALSE}
+devtools::load_all()
 ```
 
+**`{tastypie}`** allows the user to easily create many different pie charts based on different templates.  
+  
+Using **`pie_bake()`** you just have to choose a template and if you want the proportions to be displayed in the plot or not (if you want, you can also set a title and a group name):
+
+```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 300}
+example <- data.frame(
+  c("a. Is", "b. Not", "c. The", "d. Only", "e. One"),
+  c(2.9, 6.9, 4.20, 13.12, 6.66)
+)
+
+pie_bake(data = example, template = "red1", perc = TRUE,
+         title = "Perhaps", group_name = "She")
+```
+
+Or, if you want something more extravagant (*but probably less understandable*), choose a template and try **`pie_bake_pro()`**:
+
+```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 300}
+pie_bake_pro(data = example, template = "dart5",
+             title = "Perhaps", group_name = "She")
+```
+
+
+Not sure which template to choose? Run **`pie_discover()`** to find out a random combination of templates, number of groups and features and get an idea of the many available plots:  
+  
+```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 300}
+pie_discover()
+```
+
+Want to display an example of a particular template with particular features? Try **`pie_templates()`**:
+
+```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 300}
+pie_templates("eaten4", n_groups = 5)
+```
+
+
+Do you want a list of all the available templates? Check the **`pie_template_list`** and the **`pie_template_list_pro`** vectors!
+```{r}
+pie_template_list # to be used with pie_bake()
+
+pie_template_list_pro # to be used with pie_bake_pro()
+```
+
+**Be curious, there are many tasty pies!**
+
+## Feature request
+If you need some more features, please open an issue on
+[github](https://github.com/PaoloDalena/tastypie/issues).
+
+
+## Bug reports
+If you encounter a bug, please file a
+[reprex](https://github.com/tidyverse/reprex)
+(minimal reproducible example) on
+[github](https://github.com/PaoloDalena/tastypie/issues).
