@@ -43,10 +43,13 @@ pie_datacheck <- function(data, check = FALSE){
   if(!is.numeric(data[,2])){
     stop("In the second variable (column) of the dataframe there must be numerical values!")
   }
+  if (!all(data[,2] > 0)){
+    stop("The values in the second column must be all positive and different from zero!")
+  }
   if(check){
     message("Your dataframe is ready for making tasty pies :)")
   }
-  if(dim(data)[1] > 8){
-    warning("Maybe the number of groups is too high for an understable pie chart.")
+  if(dim(data)[1] > 9){
+    message("Maybe the number of groups is too high for an understable pie chart.")
   }
 }
