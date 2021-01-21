@@ -18,8 +18,9 @@ You only need to type *“why pie charts are bad”* on
 [Google](https://www.google.com/search?q=why+pie+charts+are+bad) to find
 thousands of articles full of (very valid) reasons why this type of
 chart should not be used.  
-**However**, my mother, a high school teacher of Latin and Italian
-literature, swears she understands more from something like this:
+[However](https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg),
+my mother, a high school teacher of Latin and Italian literature, swears
+she understands more from something like this:
 
 <img src="man/figures/pie_readme.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
@@ -189,7 +190,7 @@ Want to display an example of a particular template with particular
 features? Try **`pie_templates()`**:
 
 ``` r
-pie_templates("eaten4", n_groups = 5)
+pie_templates("eaten4", n_groups = 7)
 ```
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
