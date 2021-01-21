@@ -1,8 +1,8 @@
-#' @importFrom magrittr %>%
-#' @importFrom dplyr mutate
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc
 #' @importFrom utils head
+#' @importFrom RColorBrewer brewer.pal
+#' @importFrom shadowtext geom_shadowtext
 #' @import ggplot2
 pie_bake <- function(
   data,
@@ -370,11 +370,12 @@ pie_bake <- function(
     # * basic ------------------
     if(template == "basic1"){
       ggplot(data_n, aes(x="", y=value, fill=group))+
-        geom_bar(width = 1, stat = "identity")+
+        geom_bar(width = 1, stat = "identity", color = "black")+
         coord_polar("y", start=0)+
         theme_void()+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = scales::label_percent(accuracy = 1)(value/sum(value))), size=5)+
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
+                      color = "black", bg.color = "white", family = "mono", fontface = "bold", size=5)+
         ggtitle(title)+
         scale_fill_discrete(name = group_name)+
         theme(plot.title = element_text(
@@ -387,8 +388,10 @@ pie_bake <- function(
         theme_minimal()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Set3", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
-                      label = scales::label_percent(accuracy = 1)(value/sum(value))), size=5)+
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+                      label = scales::label_percent(accuracy = 1)(value/sum(value))),
+                      color = rev(brewer.pal(length(data_n[,1]), "Set3")),
+                      bg.color = "black",family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -412,9 +415,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Paired", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "mono", fontface = "bold",size=5)+
+                  color = "black", family = "mono", fontface = "bold",size=5,
+                  bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -425,9 +429,10 @@ pie_bake <- function(
         theme_linedraw()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Accent", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "sans", fontface = "bold",size=5)+
+                  color = "black", family = "sans", fontface = "bold",size=5,
+                  bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -439,9 +444,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "white", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "white", family = "mono", fontface = "bold", size=5,
+                  color = "black")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -452,7 +458,7 @@ pie_bake <- function(
         theme_classic()+
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
                   color = "beige", family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
@@ -465,9 +471,10 @@ pie_bake <- function(
         theme_minimal()+
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "yellow", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "yellow", family = "mono", fontface = "bold", size=5,
+                  color = "black")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -478,22 +485,24 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "chartreuse", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "aquamarine", family = "mono", fontface = "bold", size=5,
+                  color = brewer.pal(length(data_n[,1]), "Greys"))+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
     else if(template == "bw5"){
       ggplot(data_n, aes(x="", y=value, fill=data_n[,1])) +
-        geom_bar(stat="identity", width=1, color = "darkviolet") +
+        geom_bar(stat="identity", width=1, color = "deeppink") +
         coord_polar("y", start=0)+
         theme_void()+
         ggtitle(title)+
         scale_fill_grey(name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "deeppink", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "deeppink", family = "mono", fontface = "bold", size=5,
+                  color = "black")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -505,9 +514,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "mono", fontface = "bold", size=5)+
+                  color = "black", family = "mono", fontface = "bold", size=5,
+                  bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="darkblue", size=16, face="bold", hjust = 0.5))
     }
@@ -518,9 +528,10 @@ pie_bake <- function(
         theme_classic()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "darkorange", family = "mono", fontface = "bold", size=5)+
+                  color = "darkorange", family = "mono", fontface = "bold", size=5,
+                  bg.color = "black")+
         theme(plot.title = element_text(
           family = "mono", color="darkblue", size=16, face="bold", hjust = 0.5))
     }
@@ -531,9 +542,10 @@ pie_bake <- function(
         theme_minimal()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "antiquewhite4", family = "mono", fontface = "bold", size=5)+
+                  color = "antiquewhite4", family = "mono", fontface = "bold", size=5,
+                  bg.color = "yellow")+
         theme(plot.title = element_text(
           family = "mono", color="darkblue", size=16, face="bold", hjust = 0.5))
     }
@@ -544,22 +556,23 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "black", family = "mono", fontface = "bold", size=5,
+                  color = rev(brewer.pal(length(data_n[,1]), "Blues")))+
         theme(plot.title = element_text(
           family = "mono", color="darkblue", size=16, face="bold", hjust = 0.5))
     }
     else if(template == "blue5"){
       ggplot(data_n, aes(x="", y=value, fill=data_n[,1])) +
-        geom_bar(stat="identity", width=1, color = "darkviolet") +
+        geom_bar(stat="identity", width=1, color = "deeppink") +
         coord_polar("y", start=0)+
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Blues", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "deeppink", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "deeppink", family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
           family = "mono", color="darkblue", size=16, face="bold", hjust = 0.5))
     }
@@ -571,9 +584,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "mono", fontface = "bold", size=5)+
+                  color = "black", family = "mono", fontface = "bold", size=5,
+                  bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="darkred", size=14, face="bold", hjust = 0.5))
     }
@@ -584,9 +598,10 @@ pie_bake <- function(
         theme_classic()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "blue4", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "black", family = "mono", fontface = "bold", size=5,
+                  color = rev(brewer.pal(length(data_n[,1]), "Oranges")))+
         theme(plot.title = element_text(
           family = "mono", color="darkred", size=14, face="bold", hjust = 0.5))
     }
@@ -597,9 +612,10 @@ pie_bake <- function(
         theme_minimal()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "mono", fontface = "bold", size=5)+
+                  color = "black", family = "mono", fontface = "bold", size=5,
+                  bg.color = "darkgoldenrod")+
         theme(plot.title = element_text(
           family = "mono", color="darkred", size=14, face="bold", hjust = 0.5))
     }
@@ -610,9 +626,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "aquamarine2", family = "mono", fontface = "bold", size=5)+
+                  color = "aquamarine2", family = "mono", fontface = "bold", size=5,
+                  bg.color = "black")+
         theme(plot.title = element_text(
           family = "mono", color="darkred", size=14, face="bold", hjust = 0.5))
     }
@@ -623,9 +640,9 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "darkviolet", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "deeppink", family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
           family = "mono", color="darkred", size=14, face="bold", hjust = 0.5))
     }
@@ -637,9 +654,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "black", family = "mono", fontface = "bold", size=5)+
+                  color = "black", family = "mono", fontface = "bold", size=5,
+                  bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -647,12 +665,13 @@ pie_bake <- function(
       ggplot(data_n, aes(x="", y=value, fill=data_n[,1])) +
         geom_bar(stat="identity", width=1, color = "black") +
         coord_polar("y", start=0)+
-        theme_classic()+
+        theme_minimal()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "darkorange", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "black", family = "mono", fontface = "bold", size=5,
+                  color = rev(brewer.pal(length(data_n[,1]), "Spectral")))+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -676,9 +695,10 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "darkslategray", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "aquamarine", family = "mono", fontface = "bold", size=5,
+                  color = "black")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -689,9 +709,9 @@ pie_bake <- function(
         theme_void()+
         ggtitle(title)+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
-        geom_text(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
+        geom_shadowtext(aes(y = value/2 + c(0, cumsum(value)[-length(value)]),
                       label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                  color = "darkviolet", family = "mono", fontface = "bold", size=5)+
+                  bg.color = "deeppink", family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -709,9 +729,10 @@ pie_bake <- function(
         theme_void()+
         scale_fill_brewer(palette = "Spectral", name = group_name)+
         ggtitle(title)+
-        geom_text( x=3.5, aes(y=labelPosition,
+        geom_shadowtext( x=3.5, aes(y=labelPosition,
                                label=scales::label_percent(accuracy = 1)(value/sum(value))),
-                   color = "black", family = "mono", fontface = "bold", size=5)+
+                   color = "black", family = "mono", fontface = "bold", size=5,
+                   bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -728,9 +749,10 @@ pie_bake <- function(
         theme_void()+
         scale_fill_brewer(palette = "Accent", name = group_name)+
         ggtitle(title)+
-        geom_text( x=3.5, aes(y=labelPosition,
+        geom_shadowtext( x=3.5, aes(y=labelPosition,
                               label=scales::label_percent(accuracy = 1)(value/sum(value))),
-                   color = "black", family = "mono", fontface = "bold", size=5)+
+                   bg.color = "black", family = "mono", fontface = "bold", size=5,
+                   color = rev(brewer.pal(length(data_n[,1]), "Accent")))+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -747,9 +769,9 @@ pie_bake <- function(
         theme_void()+
         scale_fill_brewer(palette = "Oranges", name = group_name)+
         ggtitle(title)+
-        geom_text( x=3.5, aes(y=labelPosition,
+        geom_shadowtext( x=3.5, aes(y=labelPosition,
                               label=scales::label_percent(accuracy = 1)(value/sum(value))),
-                   color = "blue4", family = "mono", fontface = "bold", size=5)+
+                   bg.color = "blue4", family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -766,9 +788,10 @@ pie_bake <- function(
         theme_void()+
         scale_fill_brewer(palette = "Blues", name = group_name)+
         ggtitle(title)+
-        geom_text( x=3.5, aes(y=labelPosition,
+        geom_shadowtext( x=3.5, aes(y=labelPosition,
                               label=scales::label_percent(accuracy = 1)(value/sum(value))),
-                   color = "darkorange1", family = "mono", fontface = "bold", size=5)+
+                   color = "darkred", family = "mono", fontface = "bold", size=5,
+                   bg.color = "white")+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
@@ -785,9 +808,9 @@ pie_bake <- function(
         theme_void()+
         scale_fill_grey(name = group_name)+
         ggtitle(title)+
-        geom_text( x=3.5, aes(y=labelPosition,
+        geom_shadowtext( x=3.5, aes(y=labelPosition,
                               label=scales::label_percent(accuracy = 1)(value/sum(value))),
-                   color = "white", family = "mono", fontface = "bold", size=5)+
+                   bg.color = "black", family = "mono", fontface = "bold", size=5)+
         theme(plot.title = element_text(
           family = "mono", color="black", size=16, face="bold", hjust = 0.5))
     }
