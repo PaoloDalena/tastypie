@@ -1,3 +1,7 @@
+#' @importFrom dplyr arrange
+#' @importFrom dplyr desc
+#' @importFrom RColorBrewer brewer.pal
+#' @importFrom shadowtext geom_shadowtext
 pie_bake_pro <- function(
   data,
   template,
@@ -87,9 +91,9 @@ pie_bake_pro <- function(
             axis.ticks.y=element_blank(),
             legend.position = "none")+
       scale_fill_brewer(palette = "Spectral", name = group_name)+
-      geom_text(aes(y = value+ 5,
+      geom_shadowtext(aes(y = value+ 5,
                     label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                color = "black", family = "mono", fontface = "bold", size=5)+
+                color = rev(brewer.pal(length(data_n[,1]), "Spectral")), family = "mono", fontface = "bold", size=5)+
       theme(plot.title = element_text(
         family = "mono", color="black", size=16, face="bold", hjust = 0.5))
   }
@@ -155,9 +159,9 @@ pie_bake_pro <- function(
             axis.text.y=element_blank(),
             axis.ticks.y=element_blank())+
       scale_fill_brewer(palette = "Spectral", name = group_name)+
-      geom_text(aes(y = value - 5,
+      geom_shadowtext(aes(y = value - 5,
                     label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                color = "black", family = "mono", fontface = "bold", size=5)+
+                    color = rev(brewer.pal(length(data_n[,1]), "Spectral")), family = "mono", fontface = "bold", size=5)+
       theme(plot.title = element_text(
         family = "mono", color="black", size=16, face="bold", hjust = 0.5))
   }
@@ -188,9 +192,9 @@ pie_bake_pro <- function(
             axis.text.y=element_blank(),
             axis.ticks.y=element_blank())+
       scale_fill_brewer(palette = "Accent", name = group_name)+
-      geom_text(aes(y = value - 5,
+      geom_shadowtext(aes(y = value - 5,
                     label = scales::label_percent(accuracy = 1)(value/sum(value))),
-                color = "black", family = "mono", fontface = "bold", size=5)+
+                color = rev(brewer.pal(length(data_n[,1]), "Accent")), family = "mono", fontface = "bold", size=5)+
       theme(plot.title = element_text(
         family = "mono", color="black", size=16, face="bold", hjust = 0.5))
   }
