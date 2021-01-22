@@ -25,8 +25,6 @@ A fairly simple data frame with 5 groups will be considered. Percentages will be
 
 *The same for the* **`pie_bake_pro()`** *function can be found by scrolling down.*
 
-**Please note that, for space issues, the charts will be particularly small, so the text may appear too large or not perfectly positioned. However, when the functions are used normally, everything will be proportioned and well placed.**
-
 ```{r,fig.align = "center", dpi=400, out.width="75%", out.height="75%"}
 ex <- data.frame(
   LETTERS[1:5],
