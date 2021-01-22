@@ -1,0 +1,56 @@
+---
+title: "available_templates"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{available_templates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r, include=FALSE}
+devtools::load_all(".")
+```
+
+## Available templates for **`pie_bake()`**
+
+Here you can find a comprehensive visualization of all the possible templates that you can access using **`pie_bake()`**.  
+A fairly simple data frame with 5 groups will be considered. Percentages will be displayed (i.e. the argument `perc` will be fixed to `TRUE`), with the title corresponding to the template name and a generic group name (i.e. "groups").
+
+*The same for the* **`pie_bake_pro()`** *function can be found by scrolling down.*
+
+**Please note that, for space issues, the charts will be particularly small, so the text may appear too large or not perfectly positioned. However, when the functions are used normally, everything will be proportioned and well placed.**
+
+```{r,fig.align = "center", dpi=400, out.width="75%", out.height="75%"}
+ex <- data.frame(
+  LETTERS[1:5],
+  c(65, 24, 54, 12, 43)
+)
+
+for(i in pie_template_list){
+  print(pie_bake(ex, template = i, perc = TRUE, title = i))
+}
+```
+
+
+## Available templates for **`pie_bake_pro()`**
+
+Here we don't have to set the argument `perc` (there are some templates that display percentages anyways).
+
+```{r, fig.align = "center", dpi=400, out.width="75%", out.height="75%"}
+ex <- data.frame(
+  LETTERS[1:5],
+  c(65, 24, 54, 12, 43)
+)
+
+for(i in pie_template_list_pro){
+  print(pie_bake_pro(ex, template = i, title = i))
+}
+```
+
