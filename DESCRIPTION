@@ -1,16 +1,34 @@
 Package: tastypie
-Title: What the Package Does (One Line, Title Case)
+Title: Easy Pie Charts
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Paolo",
+           family = "Dalena",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "paolodalena97@gmail.com")
+Description: You only need to type 'why pie charts are bad'on Google to find
+    thousands of articles full of (valid) reasons why other types of charts 
+    should be preferred over this one.
+    Therefore, because of the little use due to the reasons already mentioned,
+    making pie charts (and related) in R is not straightforward, so other 
+    functions are needed to simplify things.
+    In this R package there are useful functions to make 'tasty' pie charts 
+    immediately by exploiting the many cool templates provided.
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    ggplot2,
+    dplyr,
+    magrittr,
+    scales,
+    RColorBrewer,
+    shadowtext
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
