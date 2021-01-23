@@ -12,6 +12,7 @@ status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.o
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/github/last-commit/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie/commits/master)
 <!-- badges: end -->
 
 You only need to type *“why pie charts are bad”* on
@@ -155,6 +156,10 @@ want the proportions to be displayed in the plot or not (if you want,
 you can also set a title and a group name):
 
 ``` r
+library(tastypie)
+```
+
+``` r
 example <- data.frame(
   c("a. Is", "b. Not", "c. The", "d. Only", "e. One"),
   c(2.9, 6.9, 4.20, 13.12, 6.66)
@@ -184,16 +189,16 @@ an idea of the many available plots:
 pie_discover()
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Want to display an example of a particular template with particular
 features? Try **`pie_templates()`**:
 
 ``` r
-pie_templates("eaten4", n_groups = 7)
+pie_templates("eaten4", n_groups = 9)
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Do you want a list of all the available templates? Check the
 **`pie_template_list`** and the **`pie_template_list_pro`** vectors\!
@@ -217,11 +222,11 @@ pie_template_list_pro # to be used with pie_bake_pro()
 
 ## Feature request
 
-If you need some more features, please open an issue on
-[github](https://github.com/PaoloDalena/tastypie/issues).
+If you need some more features, please tell me
+[here](https://github.com/PaoloDalena/tastypie/issues).
 
 ## Bug reports
 
 If you encounter a bug, please file a
 [reprex](https://github.com/tidyverse/reprex) (minimal reproducible
-example) on [github](https://github.com/PaoloDalena/tastypie/issues).
+example) [here](https://github.com/PaoloDalena/tastypie/issues).
