@@ -14,6 +14,9 @@
 #' \cr
 #' The default value is \code{"all"}.
 #'
+#' @examples
+#' pie_discover()
+#' pie_discover("pro")
 #' @export
 pie_discover <- function(
   which = c("all", "bake", "pro")

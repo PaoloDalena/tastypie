@@ -3,8 +3,9 @@
 #' \code{pie_datacheck} checks if the provided data are suitable for creating pie charts
 #' using the useful functions in the \code{tastypie} package.
 #'
-#' @param data the data that you want to use for creating pie charts
-#' @param check logical, set equal to TRUE if you need a message to know if there are no problems
+#' @param data The data that you want to use for creating pie charts.
+#' @param check Logical, set equal to TRUE if you need a message to know if there are
+#' no problems.
 #'
 #' @return If the provided data are a dataframe with only two variables (columns) with
 #' the vector of labels in the first one and the vector of values in the second one, nothing
@@ -13,17 +14,16 @@
 #' @export
 #'
 #' @examples
-#'
 #' \dontrun{
 #' wrong <- c(1, 2, 3)
 #' pie_datacheck(wrong) # Error
 #'
 #' wrong2 <- data.frame("a" = c(1, 2, 3), "b" = c("ex", "am", "ple"))
 #' pie_datacheck(wrong2) # Error
-#'
+#'}
 #' right <- data.frame("a" = c("ex", "am", "ple"), "b" = c(1, 2, 3))
 #' pie_datacheck(right) # No Error ==> OK!
-#' pie_datacheck(right, check = T) # Positive message}
+#' pie_datacheck(right, check = TRUE) # Positive message
 #'
 
 pie_datacheck <- function(data, check = FALSE){
