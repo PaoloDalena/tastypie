@@ -15,7 +15,7 @@ library(badger)
 library(knitr)
 ```
 
-# tastypie <img src="man/figures/logo.png" align="right" height="139" />
+# tastypie `r badge_custom("Check the super tasty", "WEB SITE", "orangered", "https://paolodalena.github.io/tastypie/")` <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
@@ -111,6 +111,8 @@ pie_template_list # to be used with pie_bake()
 
 pie_template_list_pro # to be used with pie_bake_pro()
 ```
+
+Do you want to see all possible templates displayed? [Here](https://paolodalena.github.io/tastypie/articles/available_templates.html) you can find what you are looking for.
 
 **Be curious, there are many tasty pies!**
 

@@ -1,14 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tastypie <img src="man/figures/logo.png" align="right" height="139" />
+# tastypie [![](https://img.shields.io/badge/Check%20the%20super%20tasty-WEB%20SITE-orangered.svg)](https://paolodalena.github.io/tastypie/) <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![](https://img.shields.io/badge/devel%20version-0.0.0.9000-green.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/badge/devel%20version-0.0.1-green.svg)](https://github.com/PaoloDalena/tastypie)
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
@@ -217,6 +217,10 @@ pie_template_list_pro # to be used with pie_bake_pro()
 #> [11] "eye1"        "eye2"        "eye3"        "eye4"        "eye5"       
 #> [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"
 ```
+
+Do you want to see all possible templates displayed?
+[Here](https://paolodalena.github.io/tastypie/articles/available_templates.html)
+you can find what you are looking for.
 
 **Be curious, there are many tasty pies\!**
 
