@@ -7,9 +7,10 @@
 pie_datacheck(data, check = FALSE)
 }
 \arguments{
-\item{data}{the data that you want to use for creating pie charts}
+\item{data}{The data that you want to use for creating pie charts.}
 
-\item{check}{logical, set equal to TRUE if you need a message to know if there are no problems}
+\item{check}{Logical, set equal to TRUE if you need a message to know if there are
+no problems.}
 }
 \value{
 If the provided data are a dataframe with only two variables (columns) with
@@ -21,16 +22,15 @@ will happen. Otherwise, an error that tells you what's wrong occurs.
 using the useful functions in the \code{tastypie} package.
 }
 \examples{
-
 \dontrun{
 wrong <- c(1, 2, 3)
 pie_datacheck(wrong) # Error
 
 wrong2 <- data.frame("a" = c(1, 2, 3), "b" = c("ex", "am", "ple"))
 pie_datacheck(wrong2) # Error
-
+}
 right <- data.frame("a" = c("ex", "am", "ple"), "b" = c(1, 2, 3))
 pie_datacheck(right) # No Error ==> OK!
-pie_datacheck(right, check = T) # Positive message}
+pie_datacheck(right, check = TRUE) # Positive message
 
 }

@@ -1,3 +1,51 @@
+#' Easily create pie charts
+#'
+#' This function allows you to create cool pie charts easily by providing just
+#' the data and a template among the available ones. Moreover, you can choose whether
+#'to display percentages or not and also optionally specify a title for the chart
+#' and a name for the categories.\cr \cr
+#' Using this function you can create the *classical* pie charts (including the donut charts).
+#' If you are looking for something more *complex and extravagant* (but probably less
+#' understandable), check out the \code{\link{pie_bake_pro}} function.
+#'
+#' @param data A data frame with two variables (columns):\cr
+#' - in the first one there must be the vector of labels;\cr
+#' - in the second one there must be the vector of values.
+#'
+#' You can use \code{\link{pie_datacheck}} to understand if the data is suitable.
+#' @param template The chosen template.\cr
+#' Type \code{pie_template_list} to display all the available ones for this function.
+#' @param perc A logical value. Should the proportions be displayed?
+#' @param group_name A string. If you want, you can specify a name for the categories.
+#' @param title A string. If you want, you can specify the title of the graph.
+#'
+#' @export
+#' @examples
+#' example <- data.frame(
+#'   c("a. This", "b. Is", "c. Just", "d. An", "e. Example"),
+#'   c(2.9, 6.9, 4.20, 13.12, 6.66)
+#' )
+#' pie_bake(
+#'   data = example,
+#'   template = "basic3",
+#'   perc = TRUE,
+#'   group_name = "groups",
+#'   title = "Example1"
+#' )
+#'
+#' pie_bake(
+#'   data = example,
+#'   template = "red1",
+#'    title = "Ex2"
+#' )
+#'
+#' pie_bake(
+#'   data = example,
+#'   template = "donut2",
+#'   perc = TRUE,
+#'   group_name = "CAT:"
+#' )
+#'
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc
 #' @importFrom utils head

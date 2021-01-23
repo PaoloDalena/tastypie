@@ -1,3 +1,49 @@
+#' Easily create (more complex) pie charts
+#'
+#' This function allows you to create cool pie charts easily by providing just
+#' the data and a template among the available ones. Moreover, you can optionally
+#' specify a title for the chart and a name for the categories.\cr \cr
+#' Using this function you can create some *complex and extravagant* pie charts.
+#' If you are looking for something more *classical* (and probably more understandable),
+#'  check out the \code{\link{pie_bake}} function.
+#'
+#' @param data A data frame with two variables (columns):\cr
+#' - in the first one there must be the vector of labels;\cr
+#' - in the second one there must be the vector of values.
+#'
+#' You can use \code{\link{pie_datacheck}} to understand if the data is suitable.
+#' @param template The chosen template.\cr
+#' Type \code{pie_template_list_pro} to display all the available ones for this function.
+#' @param group_name A string. If you want, you can specify a name for the categories.
+#' @param title A string. If you want, you can specify the title of the graph.
+#'
+#' @export
+#'
+#' @examples
+#' example <- data.frame(
+#'   c("a. This", "b. Is", "c. Just", "d. An", "e. Example"),
+#'   c(2.9, 6.9, 4.20, 13.12, 6.66)
+#' )
+#' pie_bake_pro(
+#'   data = example,
+#'   template = "eaten3",
+#'   group_name = "cat:",
+#'   title = "Example1"
+#' )
+#'
+#' pie_bake_pro(
+#'   data = example,
+#'   template = "dart1",
+#'   title = "Example2!"
+#' )
+#'
+#' pie_bake_pro(
+#'   data = example,
+#'   template = "eye5",
+#'   group_name = "GROUPS:"
+#' )
+#'
+#'
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc
 #' @importFrom RColorBrewer brewer.pal

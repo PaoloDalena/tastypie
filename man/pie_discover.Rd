@@ -22,3 +22,7 @@ This function allows to user to find out a random combination of templates,
 number of groups and features in order to get an idea of the many available
 plots in the package \code{tastypie}.
 }
+\examples{
+pie_discover()
+pie_discover("pro")
+}
