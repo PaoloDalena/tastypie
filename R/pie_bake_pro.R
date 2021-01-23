@@ -19,6 +19,10 @@
 #'
 #' @export
 #'
+#' @seealso
+#' See all the available templates displayed
+#' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+#'
 #' @examples
 #' example <- data.frame(
 #'   c("a. This", "b. Is", "c. Just", "d. An", "e. Example"),

@@ -26,3 +26,7 @@ plots in the package \code{tastypie}.
 pie_discover()
 pie_discover("pro")
 }
+\seealso{
+See all the available templates displayed
+\href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+}

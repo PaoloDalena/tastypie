@@ -16,4 +16,8 @@ The vector containing all the available templates for pie charts for the
 Other less complex templates are available in \code{\link{pie_template_list}}
 that can be used through the \code{\link{pie_bake}} function.
 }
+\seealso{
+See all the available templates displayed
+\href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+}
 \keyword{datasets}

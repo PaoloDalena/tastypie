@@ -26,3 +26,7 @@ package \code{tastypie}.
 pie_templates(template = "bw1", n_groups = 3, perc = TRUE)
 pie_templates(template = "watermelon2", n_groups = 8)
 }
+\seealso{
+See all the available templates displayed
+\href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+}

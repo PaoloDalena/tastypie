@@ -15,7 +15,10 @@ making pie charts (and related) in R is not straightforward, so other functions 
 to simplify things.\cr
 In this R package there are useful functions to make \emph{tasty} pie charts immediately
 by exploiting the many cool templates provided.\cr\cr
-Find more information on the GitHub package page
+}
+\seealso{
+Find more information on the package web site
+\href{https://paolodalena.github.io/tastypie/}{here}, or on the GitHub package page
 \href{https://github.com/PaoloDalena/tastypie}{here}.
 }
 \author{

@@ -12,6 +12,10 @@
 #' \code{\link{pie_bake_pro}} (listed in the \code{pie_template_list_pro} vector),
 #' this argument is useless.
 #'
+#' @seealso
+#' See all the available templates displayed
+#' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+#'
 #' @examples
 #' pie_templates(template = "bw1", n_groups = 3, perc = TRUE)
 #' pie_templates(template = "watermelon2", n_groups = 8)

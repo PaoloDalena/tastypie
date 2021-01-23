@@ -46,6 +46,10 @@
 #'   group_name = "CAT:"
 #' )
 #'
+#' @seealso
+#' See all the available templates displayed
+#' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+#'
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc
 #' @importFrom utils head

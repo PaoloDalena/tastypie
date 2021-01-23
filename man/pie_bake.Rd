@@ -60,3 +60,7 @@ pie_bake(
 )
 
 }
+\seealso{
+See all the available templates displayed
+\href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+}

@@ -14,6 +14,10 @@
 #' \cr
 #' The default value is \code{"all"}.
 #'
+#' @seealso
+#' See all the available templates displayed
+#' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
+#'
 #' @examples
 #' pie_discover()
 #' pie_discover("pro")
