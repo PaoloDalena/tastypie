@@ -1,3 +1,21 @@
+#' Display an example of a particular template
+#'
+#' This function allows to user to display a pie chart by selecting the template,
+#' the number of groups of interest and whether to display the proportions or not,
+#' in order to make it easier to choose between the many templates available in the
+#' package \code{tastypie}.
+#'
+#' @param template The chosen template.
+#' @param n_groups A number from 2 to 9.
+#' @param perc A logical value. Should the proportions be displayed?\cr
+#' Note that if the selected template is one of those to be used with
+#' \code{\link{pie_bake_pro}} (listed in the \code{pie_template_list_pro} vector),
+#' this argument is useless.
+#'
+#' @examples
+#' pie_templates(template = "bw1", n_groups = 3, perc = TRUE)
+#' pie_templates(template = "watermelon2", n_groups = 8)
+#' @export
 pie_templates <- function(template, n_groups = 4, perc = FALSE){
   if(!template %in% c(pie_template_list, pie_template_list_pro)){
     stop("\n The selected template does NOT exist.
