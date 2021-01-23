@@ -1,0 +1,8 @@
+utils::globalVariables(c("group",
+                         "value",
+                         "prop",
+                         "pie_template_list",
+                         "pie_template_list_pro",
+                         "ymax",
+                         "ymin",
+                         "labelPosition"))
