@@ -1,0 +1,26 @@
+---
+title: "your_favourite_template"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{your_favourite_template}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Here you can check the results for the survey about which is the favorite template of the users, that you can find [here](https://docs.google.com/forms/d/e/1FAIpQLSc6w3JzSi_rMDz0w9DblDxEjYmmQR0kfAkWP9ZqEFtbWU0s_g/viewform?usp=sf_link)!
+
+```{r setup, warning=FALSE, message=FALSE, echo=FALSE, dpi = 400, fig.align = "center", out.width="75%", out.height="75%"}
+library(tastypie)
+survdata <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSAK7o0aJ0N7OWfMSHbV6CydNsq7In8f3XejxqgNiLHeewFtvp5ANQwkKHbRuSbHPjJjjx9GpMuKplO/pub?gid=1813199213&single=true&output=csv")
+a <- table(survdata[,2])
+a <- data.frame(a)
+pie_bake(a, template = "basic1", perc = T, title = "Which is your favorite template?",
+         group_name = "Template:")
+```
