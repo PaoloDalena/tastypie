@@ -21,6 +21,6 @@ library(tastypie)
 survdata <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSAK7o0aJ0N7OWfMSHbV6CydNsq7In8f3XejxqgNiLHeewFtvp5ANQwkKHbRuSbHPjJjjx9GpMuKplO/pub?gid=1813199213&single=true&output=csv")
 a <- table(survdata[,2])
 a <- data.frame(a)
-pie_bake(a, template = "basic1", perc = T, title = "Which is your favorite template?",
+pie_bake(a, template = "bw1", perc = T, title = "Which is your favorite template?",
          group_name = "Template:")
 ```
