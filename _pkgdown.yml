@@ -1,4 +1,8 @@
+home:
+  title: Easy pie charts with R
+  description: An R package for making pie (and related) charts exploiting some ggplot2 features.
+
 template:
   params:
-    bootswatch: readable
+    bootswatch: united
     ganalytics: UA-187933281-1
