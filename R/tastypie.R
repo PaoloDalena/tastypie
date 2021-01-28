@@ -2,7 +2,10 @@
 #'
 #'
 #' @description
-#' ![](logo.png "options: align = 'right' alt = 'logo' width = 120")
+#' ![](logo.png "options: alt = 'logo' width = 80")
+#'
+#'
+#'
 #' You only need to type
 #' \href{https://www.google.com/search?q=why+pie+charts+are+bad}{why pie charts are bad}
 #' on Google to find thousands of articles full of (*valid*) reasons why other types of charts
