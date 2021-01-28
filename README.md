@@ -12,7 +12,6 @@ status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.o
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
-[![](https://img.shields.io/github/last-commit/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie/commits/master)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 <!-- badges: end -->
 

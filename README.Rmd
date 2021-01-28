@@ -23,7 +23,6 @@ library(knitr)
 `r badge_devel("PaoloDalena/tastypie", "green")`
 `r badge_license("GPL-3", "yellow")`
 `r badge_code_size("PaoloDalena/tastypie")`
-`r badge_last_commit("PaoloDalena/tastypie")`
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 <!-- badges: end -->
 
