@@ -21,7 +21,7 @@ A fairly simple data frame with 5 groups will be considered. Percentages will be
 
 *The same for the* **`pie_bake_pro()`** *function can be found by scrolling down.*
 
-```{r,fig.align = "center", dpi=400, out.width="75%", out.height="75%"}
+```{r,fig.align = "center", out.width="75%", out.height="75%"}
 library(tastypie)
 ex <- data.frame(
   LETTERS[1:5],
@@ -38,7 +38,7 @@ for(i in pie_template_list){
 
 Here we don't have to set the argument `perc` (there are some templates that display percentages anyways).
 
-```{r, fig.align = "center", dpi=400, out.width="75%", out.height="75%"}
+```{r, fig.align = "center", out.width="75%", out.height="75%"}
 ex <- data.frame(
   LETTERS[1:5],
   c(65, 24, 54, 12, 43)
