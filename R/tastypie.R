@@ -18,7 +18,7 @@
 #' \href{https://github.com/PaoloDalena/tastypie}{here}.
 #'
 #' @author
-#' \strong{Author and Maintainter}: Paolo Dalena \email{paolodalena97@gmail.com}
+#' \strong{Author and Maintainer}: Paolo Dalena \email{paolodalena97@gmail.com}
 #'
 #' @docType package
 #' @name tastypie
