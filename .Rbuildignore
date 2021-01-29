@@ -9,3 +9,4 @@
 ^\.github$
 ^your_favourite_template$
 ^LICENSE$
+^cran-comments\.md$
