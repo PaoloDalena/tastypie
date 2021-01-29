@@ -19,7 +19,7 @@ library(knitr)
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
-`r badge_lifecycle("maturing", "blue")`
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 `r badge_devel("PaoloDalena/tastypie", "green")`
 `r badge_license("GPL-3", "yellow")`
 `r badge_code_size("PaoloDalena/tastypie")`
