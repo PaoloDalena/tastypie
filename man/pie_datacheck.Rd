@@ -22,13 +22,12 @@ will happen. Otherwise, an error that tells you what's wrong occurs.
 using the useful functions in the \code{tastypie} package.
 }
 \examples{
-\dontrun{
 wrong <- c(1, 2, 3)
-pie_datacheck(wrong) # Error
+# Would return an Error
 
 wrong2 <- data.frame("a" = c(1, 2, 3), "b" = c("ex", "am", "ple"))
-pie_datacheck(wrong2) # Error
-}
+# Would return an Error
+
 right <- data.frame("a" = c("ex", "am", "ple"), "b" = c(1, 2, 3))
 pie_datacheck(right) # No Error ==> OK!
 pie_datacheck(right, check = TRUE) # Positive message
