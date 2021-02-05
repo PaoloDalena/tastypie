@@ -1,4 +1,10 @@
-## Resubmission
+## Resubmission #2
+This is a resubmission. In this version I have:
+
+* Added `\value` to .Rd files to explain the functions results in the documentations (of `pie_bake()`, `pie_bake_pro()`, `pie_templates()`, `pie_discover()`).
+* Solved the `\dontrun{}` issue in the examples of `pie_datacheck()`
+
+## Resubmission #1
 This is a resubmission. In this version I have:
 
 * Fixed the lifecycle URL in the README that moved from https://www.tidyverse.org/lifecycle/#maturing to https://lifecycle.r-lib.org/articles/stages.html .
