@@ -19,6 +19,11 @@
 #'
 #' @export
 #'
+#' @return
+#' A ggplot object.
+#' In particular, this function returns a pie (or similar) chart according to the
+#' data, the choice of template, and the other specifications provided.
+#'
 #' @seealso
 #' See all the available templates displayed
 #' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!

@@ -17,6 +17,11 @@ that can be used through \code{\link{pie_bake_pro}}.\cr
 \cr
 The default value is \code{"all"}.}
 }
+\value{
+A ggplot object.
+In particular, this function returns a pie (or similar) chart according to a random
+choice of template and the other features.
+}
 \description{
 This function allows to user to find out a random combination of templates,
 number of groups and features in order to get an idea of the many available

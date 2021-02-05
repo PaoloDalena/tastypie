@@ -19,6 +19,11 @@
 #' @param group_name A string. If you want, you can specify a name for the categories.
 #' @param title A string. If you want, you can specify the title of the graph.
 #'
+#' @return
+#' A ggplot object.
+#' In particular, this function returns a pie (or donut) chart according to the
+#' data, the choice of template, and the other specifications provided.
+#'
 #' @export
 #' @examples
 #' example <- data.frame(

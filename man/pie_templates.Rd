@@ -16,6 +16,11 @@ Note that if the selected template is one of those to be used with
 \code{\link{pie_bake_pro}} (listed in the \code{pie_template_list_pro} vector),
 this argument is useless.}
 }
+\value{
+A ggplot object.
+In particular, this function returns a pie (or similar) chart according to the
+choice of template and the other specifications provided.
+}
 \description{
 This function allows to user to display a pie chart by selecting the template,
 the number of groups of interest and whether to display the proportions or not,

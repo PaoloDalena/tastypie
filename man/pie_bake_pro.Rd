@@ -22,6 +22,11 @@ Type \code{pie_template_list_pro} to display all the available ones for this fun
 
 \item{title}{A string. If you want, you can specify the title of the graph.}
 }
+\value{
+A ggplot object.
+In particular, this function returns a pie (or similar) chart according to the
+data, the choice of template, and the other specifications provided.
+}
 \description{
 This function allows you to create cool pie charts easily by providing just
 the data and a template among the available ones. Moreover, you can optionally

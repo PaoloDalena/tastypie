@@ -14,6 +14,11 @@
 #' \cr
 #' The default value is \code{"all"}.
 #'
+#' @return
+#' A ggplot object.
+#' In particular, this function returns a pie (or similar) chart according to a random
+#' choice of template and the other features.
+#'
 #' @seealso
 #' See all the available templates displayed
 #' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
