@@ -1,14 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tastypie [![](https://img.shields.io/badge/Check%20the%20super%20tasty-WEB%20SITE-orangered.svg)](https://paolodalena.github.io/tastypie/) <img src="man/figures/logo.png" align="right" height="139" />
+# tastypie [![](https://img.shields.io/badge/Check%20the%20super--tasty-WEB%20SITE-orangered.svg)](https://paolodalena.github.io/tastypie/) <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![](https://img.shields.io/badge/devel%20version-0.0.1-green.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/badge/devel%20version-0.0.2-green.svg)](https://github.com/PaoloDalena/tastypie)
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
