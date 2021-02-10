@@ -138,12 +138,36 @@ exploiting some [ggplot2](https://ggplot2.tidyverse.org/) features.
 
 ## Installation
 
-You can install the development version from
+You can install the released version of `{tastypie}` from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("tastypie")
+```
+
+Or, you can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("PaoloDalena/tastypie")
+```
+
+Then, you can attach to your session with:
+
+``` r
+library(tastypie)
+#>             $$  $$  $$
+#>           __||__||__||__
+#>          | * * * * * * *|
+#>          |* * * * * * * |
+#>          | * * * * * * *|
+#>          |______________|
+#>  _              _              _
+#> | |_  ___  ___ | |_  _ _  ___ |_| ___
+#> |  _|| .'||_ -||  _|| | || . || || -_|
+#> |_|  |__,||___||_|  |_  ||  _||_||___|
+#>                     |___||_|
 ```
 
 ## Usage
@@ -156,10 +180,6 @@ want the proportions to be displayed in the plot or not (if you want,
 you can also set a title and a group name):
 
 ``` r
-library(tastypie)
-```
-
-``` r
 example <- data.frame(
   c("a. Is", "b. Not", "c. The", "d. Only", "e. One"),
   c(2.9, 6.9, 4.20, 13.12, 6.66)
@@ -169,7 +189,7 @@ pie_bake(data = example, template = "red1", perc = TRUE,
          title = "Perhaps", group_name = "She")
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Or, if you want something more extravagant (*but probably less
 understandable*), choose a template and try **`pie_bake_pro()`**:
@@ -179,7 +199,7 @@ pie_bake_pro(data = example, template = "dart5",
              title = "Perhaps", group_name = "She")
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Not sure which template to choose? Run **`pie_discover()`** to find out
 a random combination of templates, number of groups and features and get
@@ -189,7 +209,7 @@ an idea of the many available plots:
 pie_discover()
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Want to display an example of a particular template with particular
 features? Try **`pie_templates()`**:
@@ -198,7 +218,7 @@ features? Try **`pie_templates()`**:
 pie_templates("eaten4", n_groups = 9)
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Do you want a list of all the available templates? Check the
 **`pie_template_list`** and the **`pie_template_list_pro`** vectors\!

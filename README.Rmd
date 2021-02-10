@@ -54,22 +54,31 @@ In this R package there are useful functions for making **tasty pies** exploitin
 
 ## Installation
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the released version of `{tastypie}` from [CRAN](https://CRAN.R-project.org) with:
+
+```{r, eval = FALSE}
+install.packages("tastypie")
+```
+
+Or, you can install the development version from [GitHub](https://github.com/) with:
 
 ``` {r, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("PaoloDalena/tastypie")
 ```
 
+Then, you can attach to your session with:
+
+```{r}
+library(tastypie)
+```
+
+
 ## Usage
 
 **`{tastypie}`** allows the user to easily create many different pie charts based on different templates.  
   
 Using **`pie_bake()`** you just have to choose a template and if you want the proportions to be displayed in the plot or not (if you want, you can also set a title and a group name):
-
-```{r example, message=FALSE}
-library(tastypie)
-```
 
 ```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 400}
 example <- data.frame(

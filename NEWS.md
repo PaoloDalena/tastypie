@@ -1,4 +1,4 @@
-# tastypie 0.0.2
+# tastypie 0.0.2 - NOW AVAILABLE ON CRAN!
 
 * Added the description of the function results in the documentations of `pie_bake`, `pie_bake_pro`, `pie_templates` and `pie_discover`.
 * Solved some issues regarding the examples of the `pie_datacheck` function.
