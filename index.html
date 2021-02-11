@@ -160,19 +160,34 @@ Due to the little use because of the already mentioned reasons, making pie (and 
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<p>You can install the released version of <a href="https://paolodalena.github.io/tastypie/">tastypie</a> from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tastypie"</span><span class="op">)</span></code></pre></div>
+<p>Or, you can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"PaoloDalena/tastypie"</span><span class="op">)</span></code></pre></div>
+<p>Then, you can attach to your session with:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/">tastypie</a></span><span class="op">)</span>
+<span class="co">#&gt;             $$  $$  $$</span>
+<span class="co">#&gt;           __||__||__||__</span>
+<span class="co">#&gt;          | * * * * * * *|</span>
+<span class="co">#&gt;          |* * * * * * * |</span>
+<span class="co">#&gt;          | * * * * * * *|</span>
+<span class="co">#&gt;          |______________|</span>
+<span class="co">#&gt;  _              _              _</span>
+<span class="co">#&gt; | |_  ___  ___ | |_  _ _  ___ |_| ___</span>
+<span class="co">#&gt; |  _|| .'||_ -||  _|| | || . || || -_|</span>
+<span class="co">#&gt; |_|  |__,||___||_|  |_  ||  _||_||___|</span>
+<span class="co">#&gt;                     |___||_|</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
 <p><strong><a href="https://paolodalena.github.io/tastypie/">tastypie</a></strong> allows the user to easily create many different pie charts based on different templates.</p>
 <p>Using <strong><code><a href="reference/pie_bake.html">pie_bake()</a></code></strong> you just have to choose a template and if you want the proportions to be displayed in the plot or not (if you want, you can also set a title and a group name):</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/">tastypie</a></span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
   <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a. Is"</span>, <span class="st">"b. Not"</span>, <span class="st">"c. The"</span>, <span class="st">"d. Only"</span>, <span class="st">"e. One"</span><span class="op">)</span>,
   <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2.9</span>, <span class="fl">6.9</span>, <span class="fl">4.20</span>, <span class="fl">13.12</span>, <span class="fl">6.66</span><span class="op">)</span>
@@ -180,22 +195,22 @@ Due to the little use because of the already mentioned reasons, making pie (and 
 
 <span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"red1"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,
          title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-6-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>Or, if you want something more extravagant (<em>but probably less understandable</em>), choose a template and try <strong><code><a href="reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"dart5"</span>,
              title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-7-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Not sure which template to choose? Run <strong><code><a href="reference/pie_discover.html">pie_discover()</a></code></strong> to find out a random combination of templates, number of groups and features and get an idea of the many available plots:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_discover.html">pie_discover</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Want to display an example of a particular template with particular features? Try <strong><code><a href="reference/pie_templates.html">pie_templates()</a></code></strong>:</p>
+<p>Not sure which template to choose? Run <strong><code><a href="reference/pie_discover.html">pie_discover()</a></code></strong> to find out a random combination of templates, number of groups and features and get an idea of the many available plots:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_templates.html">pie_templates</a></span><span class="op">(</span><span class="st">"eaten4"</span>, n_groups <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Do you want a list of all the available templates? Check the <strong><code>pie_template_list</code></strong> and the <strong><code>pie_template_list_pro</code></strong> vectors!</p>
+<code class="sourceCode R"><span class="fu"><a href="reference/pie_discover.html">pie_discover</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-11-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Want to display an example of a particular template with particular features? Try <strong><code><a href="reference/pie_templates.html">pie_templates()</a></code></strong>:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/pie_templates.html">pie_templates</a></span><span class="op">(</span><span class="st">"eaten4"</span>, n_groups <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Do you want a list of all the available templates? Check the <strong><code>pie_template_list</code></strong> and the <strong><code>pie_template_list_pro</code></strong> vectors!</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pie_template_list</span> <span class="co"># to be used with pie_bake()</span>
 <span class="co">#&gt;  [1] "basic1"   "basic2"   "basic3"   "basic4"   "basic5"   "bw1"     </span>
 <span class="co">#&gt;  [7] "bw2"      "bw3"      "bw4"      "bw5"      "blue1"    "blue2"   </span>
@@ -228,6 +243,8 @@ Due to the little use because of the already mentioned reasons, making pie (and 
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=tastypie">https://​cloud.r-project.org/​package=tastypie</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/PaoloDalena/tastypie/">https://​github.com/​PaoloDalena/​tastypie/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/PaoloDalena/tastypie/issues">https://​github.com/​PaoloDalena/​tastypie/​issues</a>
