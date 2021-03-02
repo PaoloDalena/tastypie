@@ -7,10 +7,13 @@
 #' If you are looking for something more *classical* (and probably more understandable),
 #'  check out the \code{\link{pie_bake}} function.
 #'
-#' @param data A data frame with two variables (columns):\cr
+#' @param data A data frame (or a tibble) with two variables (columns):\cr
 #' - in the first one there must be the vector of labels;\cr
 #' - in the second one there must be the vector of values.
 #'
+#' Please note that the labels are automatically sorted in alphabetical order.
+#' If you want to specify a particular order, it is recommended to type numbers or
+#' letters before the category names (e.g. "a. category1", "b. category2", ...).\cr
 #' You can use \code{\link{pie_datacheck}} to understand if the data is suitable.
 #' @param template The chosen template.\cr
 #' Type \code{pie_template_list_pro} to display all the available ones for this function.
