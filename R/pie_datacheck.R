@@ -31,6 +31,9 @@ pie_datacheck <- function(data, check = FALSE){
          - in the first one there must be the vector of labels
          - in the second one there must be the vector of values.")
   }
+  if(tibble::is_tibble(data)){
+    data <- as.data.frame(data)
+  }
   if(dim(data)[2] != 2){
     stop("You have to provide a dataframe with only two variables (columns):
          - in the first one there must be the vector of labels

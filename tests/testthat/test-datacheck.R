@@ -31,3 +31,8 @@ test_that("message when too many groups", {
   a <- data.frame(letters[1:10], 1:10)
   expect_message(pie_datacheck(a), "too high")
 })
+
+test_that("also tibbles can be baked", {
+  a <- tibble::tibble(letters[1:3], 1:3)
+  expect_message(pie_datacheck(a, check = TRUE), ":)")
+})

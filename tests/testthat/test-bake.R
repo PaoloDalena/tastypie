@@ -80,3 +80,12 @@ test_that("percentages are properly computed", {
   expect_equal(sum(out1$data[,2]), 100, tolerance = 3)
   expect_equal(sum(out2$data[,2]), 100, tolerance = 3)
 })
+
+test_that("also tibbles can be baked", {
+  a <- data.frame(letters[1:3], 1:3)
+  b <- tibble::tibble(letters[1:5], 1:5)
+  c <- tibble::tibble(letters[1:5], c(4.3, 2.2, 1, 2, 3.0))
+  expect_match(class(pie_bake(tibble::as_tibble(a), template = "blue1")), "gg")
+  expect_match(class(pie_bake(b, template = "blue3")), "gg")
+  expect_match(class(pie_bake(c, template = "blue4")), "gg")
+})
