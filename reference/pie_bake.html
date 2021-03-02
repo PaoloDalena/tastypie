@@ -96,7 +96,7 @@ understandable), check out the pie_bake_pro function." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tastypie</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
       </span>
     </div>
 
@@ -172,12 +172,15 @@ understandable), check out the <code><a href='pie_bake_pro.html'>pie_bake_pro</a
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>data</th>
-      <td><p>A data frame with two variables (columns):<br /></p><ul>
+      <td><p>A data frame (or a tibble) with two variables (columns):<br /></p><ul>
 <li><p>in the first one there must be the vector of labels;<br /></p></li>
 <li><p>in the second one there must be the vector of values.</p></li>
 </ul>
 
-<p>You can use <code><a href='pie_datacheck.html'>pie_datacheck</a></code> to understand if the data is suitable.</p></td>
+<p>Please note that the labels are automatically sorted in alphabetical order.
+If you want to specify a particular order, it is recommended to type numbers or
+letters before the category names (e.g. "a. category1", "b. category2", ...).<br />
+You can use <code><a href='pie_datacheck.html'>pie_datacheck</a></code> to understand if the data is suitable.</p></td>
     </tr>
     <tr>
       <th>template</th>
