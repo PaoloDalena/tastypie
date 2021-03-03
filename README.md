@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![](https://img.shields.io/badge/devel%20version-0.0.2-green.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/badge/devel%20version-0.0.3-green.svg)](https://github.com/PaoloDalena/tastypie)
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
@@ -20,7 +20,7 @@ You only need to type *“why pie charts are bad”* on
 thousands of articles full of (very valid) reasons why this type of
 chart should not be used.  
 [However](https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg),
-my mother, a high school teacher of Latin and Italian literature, swears
+my mother, a high school teacher of Latin and Italian Literature, swears
 she understands more from something like this:
 
 <img src="man/figures/pie_readme.png" width="75%" height="75%" style="display: block; margin: auto;" />

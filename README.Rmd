@@ -27,7 +27,7 @@ library(knitr)
 <!-- badges: end -->
 
 You only need to type *"why pie charts are bad"* on [Google](https://www.google.com/search?q=why+pie+charts+are+bad) to find thousands of articles full of (very valid) reasons why this type of chart should not be used.  
-[However](https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg), my mother, a high school teacher of Latin and Italian literature, swears she understands more from something like this:
+[However](https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg), my mother, a high school teacher of Latin and Italian Literature, swears she understands more from something like this:
 
 ```{r,include=FALSE}
 df <- data.frame(

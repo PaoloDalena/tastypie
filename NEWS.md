@@ -1,8 +1,8 @@
 # tastypie 0.0.3
 
-* Now `{tastypie}` is [`tibble`](https://tibble.tidyverse.org/)-friendly: the user can also provide a `tibble` instead of a `dataframe` for the available functions. (#1)
+* Now `{tastypie}` is `tibble`-friendly: the user can also provide a `tibble` instead of a `dataframe` for the available functions. (#1)
 * Improved the documentations of `pie_bake` and `pie_bake_pro`(added useful information about the labels and the `tibble` input).
-* Solved the CRAN issue related to the importing of the [`magrittr`](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) package that is not actually used.
+* Solved the CRAN issue related to the importing of the `magrittr` package that is not actually used.
 
 # tastypie 0.0.2 - NOW AVAILABLE ON CRAN!
 
