@@ -49,6 +49,6 @@ pie_datacheck <- function(data, check = FALSE){
     message("Your dataframe is ready for making tasty pies :)")
   }
   if(dim(data)[1] > 9){
-    message("Maybe the number of groups is too high for an understable pie chart.")
+    message("Maybe the number of groups is too high for an understable chart.")
   }
 }
