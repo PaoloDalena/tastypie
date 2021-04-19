@@ -1,4 +1,5 @@
 # to be tested and documented
+#' @importFrom packcircles circleProgressiveLayout circleLayoutVertices
 
 bubble_blow <- function(
   data,

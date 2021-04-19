@@ -27,7 +27,8 @@ Imports:
     scales,
     RColorBrewer,
     shadowtext,
-    tibble
+    tibble,
+    packcircles
 Depends: 
     R (>= 2.10)
 Suggests: 
