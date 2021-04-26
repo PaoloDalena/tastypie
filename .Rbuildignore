@@ -7,7 +7,8 @@
 ^docs$
 ^pkgdown$
 ^\.github$
-^your_favourite_template$
+^vignettes/your_favourite_template\.Rmd$
+^vignettes/tasty_tshirts\.Rmd$
 ^LICENSE$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
