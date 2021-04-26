@@ -49,3 +49,23 @@ for(i in pie_template_list_pro){
 }
 ```
 
+## Available templates for **`bubble_blow()`**
+
+Below you can see the different templates available for the function **`bubble_blow()`** that allows the user to easily create cool circular packing charts.  
+  
+
+A fairly simple data frame with 10 groups will be considered. Percentages will be displayed below the group labels (i.e. the argument `perc` will be fixed to `below`), with the title corresponding to the template name.
+
+
+```{r, fig.align = "center", out.width="75%", out.height="75%"}
+exblow <- data.frame(
+  LETTERS[1:8],
+  c(33, 24, 54, 12, 43, 88, 66, 78)
+)
+
+available_templates_bub <- c("bub1", "bub2", "bub3", "bub4", "bub5")
+
+for(i in available_templates_bub){
+  print(bubble_blow(exblow, template = i, perc = "below", title = i))
+}
+```
