@@ -5,4 +5,7 @@ utils::globalVariables(c("group",
                          "pie_template_list_pro",
                          "ymax",
                          "ymin",
-                         "labelPosition"))
+                         "labelPosition",
+                         "x",
+                         "y",
+                         "id"))
