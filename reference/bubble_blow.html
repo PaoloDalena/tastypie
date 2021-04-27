@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Available templates in tastypie for pie_bake_pro. — pie_template_list_pro • tastypie</title>
+<title>Easily create circular packing charts — bubble_blow • tastypie</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,11 +46,10 @@
 
 
 
-<meta property="og:title" content="Available templates in tastypie for pie_bake_pro. — pie_template_list_pro" />
-<meta property="og:description" content="The vector containing all the available templates for pie charts for the
-pie_bake_pro function.
-Other less complex templates are available in pie_template_list
-that can be used through the pie_bake function." />
+<meta property="og:title" content="Easily create circular packing charts — bubble_blow" />
+<meta property="og:description" content="This function allows you to create cool circular packing charts easily by providing just
+the data and a template among the available ones. Moreover, you can choose whether and
+where to display percentages and also optionally specify a title for the chart." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -150,29 +149,83 @@ that can be used through the pie_bake function." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Available templates in <code>tastypie</code> for <code>pie_bake_pro</code>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/PaoloDalena/tastypie/blob/master/R/data_2.R'><code>R/data_2.R</code></a></small>
-    <div class="hidden name"><code>pie_template_list_pro.Rd</code></div>
+    <h1>Easily create circular packing charts</h1>
+    <small class="dont-index">Source: <a href='https://github.com/PaoloDalena/tastypie/blob/master/R/bubble_blow.R'><code>R/bubble_blow.R</code></a></small>
+    <div class="hidden name"><code>bubble_blow.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The vector containing all the available templates for pie charts for the
-<code><a href='pie_bake_pro.html'>pie_bake_pro</a></code> function.
-Other less complex templates are available in <code><a href='pie_template_list.html'>pie_template_list</a></code>
-that can be used through the <code><a href='pie_bake.html'>pie_bake</a></code> function.</p>
+    <p>This function allows you to create cool circular packing charts easily by providing just
+the data and a template among the available ones. Moreover, you can choose whether and
+where to display percentages and also optionally specify a title for the chart.</p>
     </div>
 
-    <pre class="usage"><span class='va'>pie_template_list_pro</span></pre>
+    <pre class="usage"><span class='fu'>bubble_blow</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>template</span>, perc <span class='op'>=</span> <span class='st'>"no"</span>, title <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>data</th>
+      <td><p>A data frame (or a tibble) with two variables (columns):<br /></p><ul>
+<li><p>in the first one there must be the vector of labels;<br /></p></li>
+<li><p>in the second one there must be the vector of values.<br />
+You can use <code><a href='pie_datacheck.html'>pie_datacheck</a></code> to understand if the data is suitable.</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>template</th>
+      <td><p>The chosen template.<br />
+The available templates for this function are 'bub1', 'bub2', 'bub3', 'bub4', 'bub5'.</p></td>
+    </tr>
+    <tr>
+      <th>perc</th>
+      <td><p>You can choose among:<br /></p><ul>
+<li><p>'no'    : the percentages won't be displayed (default choice);</p></li>
+<li><p>'below' : the percentages will be displayed below the group labels;</p></li>
+<li><p>'right' : the percentages will be displayed next to the group labels.</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>title</th>
+      <td><p>A string. If you want, you can specify the title of the graph.</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An object of class <code>character</code> of length 20.</p>
+    <p>A ggplot object.
+In particular, this function returns a circular packing chart according to the
+data, the choice of the template, and the other specifications provided.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>See all the available templates displayed
 <a href='https://paolodalena.github.io/tastypie/articles/available_templates.html'>here</a>!</p></div>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>example</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"This"</span>, <span class='st'>"Is"</span>, <span class='st'>"Just"</span>, <span class='st'>"An"</span>, <span class='st'>"Example"</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2.9</span>, <span class='fl'>6.9</span>, <span class='fl'>4.20</span>, <span class='fl'>13.12</span>, <span class='fl'>6.66</span><span class='op'>)</span>
+<span class='op'>)</span>
+<span class='fu'>bubble_blow</span><span class='op'>(</span>
+  data <span class='op'>=</span> <span class='va'>example</span>,
+  template <span class='op'>=</span> <span class='st'>"bub1"</span>,
+  perc <span class='op'>=</span> <span class='st'>"below"</span>,
+  title <span class='op'>=</span> <span class='st'>"Example1"</span>
+<span class='op'>)</span>
+</div><div class='img'><img src='bubble_blow-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>example2</span> <span class='op'>&lt;-</span> <span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"cat 1"</span>, <span class='st'>"cat2"</span>, <span class='st'>"cat3"</span>, <span class='st'>"cat4"</span>, <span class='st'>"cat5"</span>, <span class='st'>"cat6"</span>, <span class='st'>"cat7"</span>, <span class='st'>"cat8"</span>, <span class='st'>"cat9"</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>324</span>, <span class='fl'>432</span>, <span class='fl'>499</span>, <span class='fl'>291</span>, <span class='fl'>750</span>, <span class='fl'>836</span>, <span class='fl'>314</span>, <span class='fl'>133</span>, <span class='fl'>372</span><span class='op'>)</span>
+<span class='op'>)</span>
+<span class='fu'>bubble_blow</span><span class='op'>(</span>
+  data <span class='op'>=</span> <span class='va'>example2</span>,
+  template <span class='op'>=</span> <span class='st'>"bub2"</span>,
+  perc <span class='op'>=</span> <span class='st'>"right"</span>,
+  title <span class='op'>=</span> <span class='st'>"Ex2"</span>
+<span class='op'>)</span>
+</div><div class='img'><img src='bubble_blow-2.png' alt='' width='700' height='433' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

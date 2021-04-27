@@ -70,6 +70,9 @@
       <a href="../articles/available_templates.html">available_templates</a>
     </li>
     <li>
+      <a href="../articles/tasty_tshirts.html">tasty_tshirts</a>
+    </li>
+    <li>
       <a href="../articles/your_favourite_template.html">your_favourite_template</a>
     </li>
   </ul>
@@ -153,6 +156,25 @@ A fairly simple data frame with 5 groups will be considered. Percentages will be
   <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span><span class="va">ex</span>, template <span class="op">=</span> <span class="va">i</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span>
 <span class="op">}</span></code></pre></div>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-3-1.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-2.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-3.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-4.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-5.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-6.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-7.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-8.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-9.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-10.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-11.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-12.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-13.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-14.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-15.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-16.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-17.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-18.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-19.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-20.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+</div>
+<div id="available-templates-for-bubble_blow" class="section level2">
+<h2 class="hasAnchor">
+<a href="#available-templates-for-bubble_blow" class="anchor"></a>Available templates for <strong><code>bubble_blow()</code></strong>
+</h2>
+<p>Below you can see the different templates available for the function <strong><code><a href="../reference/bubble_blow.html">bubble_blow()</a></code></strong> that allows the user to easily create cool circular packing charts.</p>
+<p>A fairly simple data frame with 10 groups will be considered. Percentages will be displayed below the group labels (i.e. the argument <code>perc</code> will be fixed to <code>below</code>), with the title corresponding to the template name.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">exblow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
+  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>,
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span>, <span class="fl">88</span>, <span class="fl">66</span>, <span class="fl">78</span><span class="op">)</span>
+<span class="op">)</span>
+
+<span class="va">available_templates_bub</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"bub1"</span>, <span class="st">"bub2"</span>, <span class="st">"bub3"</span>, <span class="st">"bub4"</span>, <span class="st">"bub5"</span><span class="op">)</span>
+
+<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">available_templates_bub</span><span class="op">)</span><span class="op">{</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="va">i</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span>
+<span class="op">}</span></code></pre></div>
+<p><img src="available_templates_files/figure-html/unnamed-chunk-4-1.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-2.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-3.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-4.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-5.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 </div>
   </div>
 
