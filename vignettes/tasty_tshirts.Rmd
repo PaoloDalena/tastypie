@@ -22,7 +22,7 @@ If this is not the case, go look at it, and maybe follow it.
 ## The `tasty t-shirts`
 
 ```{r, out.width = "90%", fig.align='center', echo = FALSE}
-knitr::include_graphics("/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt0.jpeg")
+knitr::include_graphics("/Users/PaoloMacbook/Documents/github_shared/tastypie/man/figures/shirt0.jpeg")
 ```
 
 The `tasty t-shirts` are available in black, blue and grey.
@@ -54,10 +54,10 @@ See the full gallery on the Instagram page [tastypie_rpkg](https://www.instagram
 
 ```{r, out.width = "50%", fig.align='center', echo = FALSE}
 knitr::include_graphics(c(
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt1.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt2.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt3.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt4.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt5.jpeg"))
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/man/figures/shirt1.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/man/figures/shirt2.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/man/figures/shirt3.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/man/figures/shirt4.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/man/figures/shirt5.jpeg"))
 ```
 
