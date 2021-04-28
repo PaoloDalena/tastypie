@@ -22,7 +22,7 @@ If this is not the case, go look at it, and maybe follow it.
 ## The `tasty t-shirts`
 
 ```{r, out.width = "90%", fig.align='center', echo = FALSE}
-knitr::include_graphics("/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt0.jpeg")
+knitr::include_graphics(here::here('vignettes','shirt0.jpeg'))
 ```
 
 The `tasty t-shirts` are available in black, blue and grey.
@@ -53,11 +53,10 @@ So if you are interested, contact me [here](https://paolodalena.netlify.app/#con
 See the full gallery on the Instagram page [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/)
 
 ```{r, out.width = "50%", fig.align='center', echo = FALSE}
-knitr::include_graphics(c(
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt1.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt2.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt3.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt4.jpeg",
-  "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt5.jpeg"))
+knitr::include_graphics(c(here::here('vignettes','shirt1.jpeg'),
+                          here::here('vignettes','shirt2.jpeg'),
+                          here::here('vignettes','shirt3.jpeg'),
+                          here::here('vignettes','shirt4.jpeg'),
+                          here::here('vignettes','shirt5.jpeg')))
 ```
 
