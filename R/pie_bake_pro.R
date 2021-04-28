@@ -79,7 +79,7 @@ pie_bake_pro <- function(
  Type pie_template_list_pro to see all the available templates for this function.
  Type pie_template_list to see all the available templates for the function pie_bake().")
   }
-  else if(!template %in% pie_template_list_pro){
+  else if(!template %in% c(pie_template_list_pro, "cirbar1", "cirbar2", "cirbar3", "cirbar4", "cirbar5")){
     stop("\n The selected template does NOT exist.
  Type pie_template_list_pro to see all the available templates for this function.
  Type pie_template_list to see all the available templates for the function pie_bake().")
@@ -389,5 +389,179 @@ pie_bake_pro <- function(
       ggtitle(title)+
       theme(plot.title = element_text(
         family = "mono", color="black", size=16, face="bold", hjust = 0.5))
+  }
+  # circular barplot ----
+  else if(template == "cirbar1"){
+    data <- data.frame(
+      id = seq(1, length(data$value)),
+      individual = data$group,
+      value = round(data$value/sum(data$value)*100, 0)
+    )
+
+    label_data <- data
+    number_of_bar <- nrow(label_data)
+    angle <-  90 - 360 * (label_data$id-0.5) /number_of_bar
+    label_data$hjust<-ifelse( angle < -90, 1, 0)
+    label_data$angle<-ifelse(angle < -90, angle+180, angle)
+
+    ggplot(data, aes(x=as.factor(id), y=value)) +
+      geom_bar(stat="identity", fill=alpha("darkolivegreen", 5)) +
+      ylim(-10, max(data$value) + 10) +
+      theme_void() +
+      theme(
+        axis.text = element_blank(),
+        panel.grid = element_blank(),
+        plot.title = element_text(
+          family = "mono", color="black", size=16, face="bold", hjust = 0.5)
+      ) +
+      coord_polar(start = 0) +
+      geom_shadowtext(
+        data=label_data,
+        aes(x=id, y=value+10, label=individual, hjust=hjust),
+        family = "mono", color="black", fontface="bold", bg.color = "orange",
+        alpha = 1, size = 4,
+        angle= label_data$angle, inherit.aes = FALSE) +
+      ggtitle(title)
+  }
+  else if(template == "cirbar2"){
+    data <- data.frame(
+      id = seq(1, length(data$value)),
+      individual = data$group,
+      value = round(data$value/sum(data$value)*100, 0)
+    )
+    data$individual <- paste(
+      data$individual,
+      scales::label_percent(accuracy = 1)(data$value/sum(data$value)),
+      sep = "\n")
+
+    label_data <- data
+    number_of_bar <- nrow(label_data)
+    angle <-  90 - 360 * (label_data$id-0.5) /number_of_bar
+    label_data$hjust<-ifelse( angle < -90, 1, 0)
+    label_data$angle<-ifelse(angle < -90, angle+180, angle)
+
+    ggplot(data, aes(x=as.factor(id), y=value, fill = as.factor(id))) +
+      geom_bar(stat="identity") +
+      ylim(-10, max(data$value) + 10) +
+      theme_void() +
+      theme(
+        axis.text = element_blank(),
+        panel.grid = element_blank(),
+        plot.title = element_text(
+          family = "mono", color="black", size=16, face="bold", hjust = 0.5),
+        legend.position="none"
+      ) +
+      coord_polar(start = 0) +
+      geom_label(
+        data=label_data,
+        aes(x=id, y=value+10, label=individual, hjust=hjust),
+        family = "mono", color="black", fontface="bold",
+        alpha = 1, size = 4,
+        angle= label_data$angle, inherit.aes = FALSE) +
+      ggtitle(title)
+  }
+  else if(template == "cirbar3"){
+    data <- data.frame(
+      id = seq(1, length(data$value)),
+      individual = data$group,
+      value = round(data$value/sum(data$value)*100, 0)
+    )
+
+    label_data <- data
+    number_of_bar <- nrow(label_data)
+    angle <-  90 - 360 * (label_data$id-0.5) /number_of_bar
+    label_data$hjust<-ifelse( angle < -90, 1, 0)
+    label_data$angle<-ifelse(angle < -90, angle+180, angle)
+
+    ggplot(data, aes(x=as.factor(id), y=value, color = as.factor(id))) +
+      geom_bar(stat="identity", fill= "white") +
+      ylim(-10, max(data$value) + 10) +
+      theme_void() +
+      theme(
+        axis.text = element_blank(),
+        panel.grid = element_blank(),
+        plot.title = element_text(
+          family = "mono", color="black", size=16, face="bold", hjust = 0.5),
+        legend.position="none"
+      ) +
+      coord_polar(start = 0) +
+      geom_shadowtext(
+        data=label_data,
+        aes(x=id, y=value+10, label=individual, hjust=hjust),
+        family = "mono", color="black", fontface="bold", bg.color = "yellow",
+        alpha = 1, size = 4,
+        angle= label_data$angle, inherit.aes = FALSE) +
+      ggtitle(title)
+  }
+  else if(template == "cirbar4"){
+    data <- data.frame(
+      id = seq(1, length(data$value)),
+      individual = data$group,
+      value = round(data$value/sum(data$value)*100, 0)
+    )
+
+    label_data <- data
+    number_of_bar <- nrow(label_data)
+    angle <-  90 - 360 * (label_data$id-0.5) /number_of_bar
+    label_data$hjust<-ifelse( angle < -90, 1, 0)
+    label_data$angle<-ifelse(angle < -90, angle+180, angle)
+
+    ggplot(data, aes(x=as.factor(id), y=value, color = as.factor(id))) +
+      geom_bar(stat="identity", fill= "black") +
+      ylim(-10, max(data$value) + 10) +
+      theme_void() +
+      theme(
+        axis.text = element_blank(),
+        panel.grid = element_blank(),
+        plot.title = element_text(
+          family = "mono", color="black", size=16, face="bold", hjust = 0.5),
+        legend.position="none"
+      ) +
+      coord_polar(start = 0) +
+      geom_label(
+        data=label_data,
+        aes(x=id, y=value+10, label=individual, hjust=hjust),
+        family = "mono", color="white", fontface="bold", bg = "black",
+        alpha = 1, size = 4,
+        angle= label_data$angle, inherit.aes = FALSE) +
+      ggtitle(title)
+  }
+  else if(template == "cirbar5"){
+    data <- data.frame(
+      id = seq(1, length(data$value)),
+      individual = data$group,
+      value = round(data$value/sum(data$value)*100, 0)
+    )
+
+    data$individual <- paste(
+      data$individual,
+      scales::label_percent(accuracy = 1)(data$value/sum(data$value)),
+      sep = "\n")
+
+    label_data <- data
+    number_of_bar <- nrow(label_data)
+    angle <-  90 - 360 * (label_data$id-0.5) /number_of_bar
+    label_data$hjust<-ifelse( angle < -90, 1, 0)
+    label_data$angle<-ifelse(angle < -90, angle+180, angle)
+
+    ggplot(data, aes(x=as.factor(id), y=value, color = 3)) +
+      geom_bar(stat="identity", fill = alpha("lightblue", 0.8)) +
+      ylim(-10, max(data$value) + 10) +
+      theme_void() +
+      theme(
+        axis.text = element_blank(),
+        panel.grid = element_blank(),
+        plot.title = element_text(
+          family = "mono", color="black", size=16, face="bold", hjust = 0.5),
+        legend.position="none"
+      ) +
+      coord_polar(start = 0) +
+      geom_shadowtext(
+        data=label_data,
+        aes(x=id, y=value+10, label=individual, hjust=hjust),
+        family = "mono", color="lightblue", fontface="bold", bg.color = "darkcyan",
+        alpha = 1, size = 4,
+        angle= label_data$angle, inherit.aes = FALSE) +
+      ggtitle(title)
   }
 }
