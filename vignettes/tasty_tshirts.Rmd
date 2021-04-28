@@ -1,6 +1,8 @@
 ---
 title: "tasty_tshirts"
 output: rmarkdown::html_vignette
+resource_files:
+  - man/figures/shirt0.png
 vignette: >
   %\VignetteIndexEntry{tasty_tshirts}
   %\VignetteEngine{knitr::rmarkdown}
@@ -15,21 +17,15 @@ knitr::opts_chunk$set(
 ```
 
 # Free `tasty t-shirts`!  Do you want to join the crew?
+<center><img src="https://github.com/PaoloDalena/tastypie/blob/main/man/figures/shirt0.png?raw=true"></center>
 
 You are probably on this page because yof the Instagram page [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/).  
 If this is not the case, go look at it, and maybe follow it.
 
 ## The `tasty t-shirts`
 
-\item{\code{shirt0}}{A numerical vector of the form \code{c(bottom,
-        left, top, right)} which gives the margin size specified in
-      inches.\cr
-      \if{html}{\figure{shirt0.png}{options: width="35\%" alt="Figure: shirt0.png"}}
-      \if{latex}{\figure{shirt0.png}{options: width=7cm}}
-    }
-
 ```{r, out.width = "90%", fig.align='center', eval= FALSE}
-knitr::include_graphics("/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt0.png")
+knitr::include_graphics("/tastypie/man/figures/shirt0.png")
 ```
 
 The `tasty t-shirts` are available in black, blue and grey.
