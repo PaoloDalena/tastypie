@@ -12,3 +12,4 @@
 ^LICENSE$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
+^site_figs$
