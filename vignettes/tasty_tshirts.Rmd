@@ -14,4 +14,50 @@ knitr::opts_chunk$set(
 )
 ```
 
-To be updated...
+# Free `tasty t-shirts`!  Do you want to join the crew?
+
+You are probably on this page because yof the Instagram page [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/).  
+If this is not the case, go look at it, and maybe follow it.
+
+## The `tasty t-shirts`
+
+```{r, out.width = "90%", fig.align='center', echo = FALSE}
+knitr::include_graphics("/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt0.jpeg")
+```
+
+The `tasty t-shirts` are available in black, blue and grey.
+Some people with no taste might say that they are simply a plain T-shirt with the `tastypie` logo, but the real experts know that this is the latest fashion trend and would do anything to get one.
+
+## How to get one **for free**
+
+There are two easy ways to get a fashionable `tasty t-shirt` **for free**:
+
+- First way:  
+  + send me your address by email;
+  + send me a symbolic payment of €5 (+ shipping);
+  + receive at home the tasty t-shirt in the colour and size of your choice;
+  + take a photo of yourself wearing the t-shirt and send it to me;
+  + I upload the photo on [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/);
+  + when it reaches 50 likes, I refund you the cost of the t-shirt.
+
+- Second way:  
+  + write to me saying you are interested in the shirt;
+  + send me a picture of you wearing a basic t-shirt of any kind;
+  + I upload on [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/) the photo with the logo photoshopped on your t-shirt;
+  + when it reaches 50 likes, send me your address and I'll send to you the shirt for free (you only have to pay the shipping costs).
+
+So if you are interested, contact me [here](https://paolodalena.netlify.app/#contact).
+
+## Some fans around the world
+
+See the full gallery on the Instagram page [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/)
+
+```{r, out.width = "50%", fig.align='center', echo = FALSE}
+knitr::include_graphics(c(
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt1.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt2.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt3.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt4.jpeg",
+  "/Users/PaoloMacbook/Documents/github_shared/tastypie/site_figs/shirt5.jpeg"))
+```
+
