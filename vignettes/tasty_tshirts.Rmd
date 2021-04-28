@@ -21,7 +21,14 @@ If this is not the case, go look at it, and maybe follow it.
 
 ## The `tasty t-shirts`
 
-```{r, out.width = "90%", fig.align='center', echo = FALSE}
+\item{\code{shirt0}}{A numerical vector of the form \code{c(bottom,
+        left, top, right)} which gives the margin size specified in
+      inches.\cr
+      \if{html}{\figure{shirt0.png}{options: width="35\%" alt="Figure: shirt0.png"}}
+      \if{latex}{\figure{shirt0.png}{options: width=7cm}}
+    }
+
+```{r, out.width = "90%", fig.align='center', eval= FALSE}
 knitr::include_graphics("/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt0.png")
 ```
 
@@ -52,7 +59,7 @@ So if you are interested, contact me [here](https://paolodalena.netlify.app/#con
 
 See the full gallery on the Instagram page [tastypie_rpkg](https://www.instagram.com/tastypie_rpkg/)
 
-```{r, out.width = "50%", fig.align='center', echo = FALSE}
+```{r, out.width = "50%", fig.align='center', eval = FALSE}
 knitr::include_graphics(c(
   "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt1.png",
   "/Users/PaoloMacbook/Documents/github_shared/tastypie/vignettes/shirt2.png",
