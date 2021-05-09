@@ -23,9 +23,9 @@
 #' A ggplot object.
 #'
 #' @examples
-#' img1 <- jpeg::readJPEG(system.file("img", "mark.jpeg", package="tastypie"))
+#' img1 <- jpeg::readJPEG(system.file("img", "logo.jpeg", package="tastypie"))
 #' img2 <- jpeg::readJPEG(system.file("img", "brownie.jpeg", package="tastypie"))
-#' img3 <- jpeg::readJPEG(system.file("img", "logo.jpeg", package="tastypie"))
+#' img3 <- jpeg::readJPEG(system.file("img", "mark.jpeg", package="tastypie"))
 #' imgs <- list(img1,img2,img3)
 #'
 #'  df <- data.frame(
