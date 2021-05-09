@@ -175,21 +175,21 @@ and where (and if) you want to print the percentages for each group.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>mypie</th>
-      <td><p>A ggplot object. The output from <code><a href='pie_bake.html'>pie_bake</a></code> function,
+      <td><p>A ggplot object. The output from <code><a href='pie_bake.html'>pie_bake</a></code>,
 <strong>NOT from <code><a href='pie_bake_pro.html'>pie_bake_pro</a></code></strong>. <br />
 Don't focus on the template, only lables and values will be inherited.</p></td>
     </tr>
     <tr>
       <th>imglist</th>
-      <td><p>A list of objects returned by and <code>readJPEG</code>
+      <td><p>A list of objects returned by and <code><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></code>
 used to fill slices.</p></td>
     </tr>
     <tr>
       <th>perc</th>
       <td><p>You can choose among:<br /></p><ul>
-<li><p>'no'    : the percentages won't be displayed (default choice);</p></li>
-<li><p>'below' : the percentages will be displayed below the group labels;</p></li>
-<li><p>'right' : the percentages will be displayed next to the group labels.</p></li>
+<li><p><code>'no'</code>    : the percentages won't be displayed (default choice);</p></li>
+<li><p><code>'below'</code> : the percentages will be displayed below the group labels;</p></li>
+<li><p><code>'right'</code> : the percentages will be displayed next to the group labels.</p></li>
 </ul></td>
     </tr>
     <tr>
@@ -209,11 +209,11 @@ chart, default is <code>"black"</code>.</p></td>
     <p>A ggplot object.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>img1</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'>readJPEG</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"mark.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘jpeg’</span></div><div class='input'><span class='va'>img2</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'>readJPEG</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"brownie.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘jpeg’</span></div><div class='input'><span class='va'>img3</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'>readJPEG</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"logo.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘jpeg’</span></div><div class='input'><span class='va'>imgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img1</span>,<span class='va'>img2</span>,<span class='va'>img3</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'img1' not found</span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='va'>img1</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"mark.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>img2</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"brownie.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>img3</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"logo.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>imgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img1</span>,<span class='va'>img2</span>,<span class='va'>img3</span><span class='op'>)</span>
+
  <span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
    <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mark fan"</span>, <span class='st'>"My brownie"</span>, <span class='st'>"Tastypie logo"</span><span class='op'>)</span>,
    <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>500</span>, <span class='fl'>200</span>, <span class='fl'>300</span><span class='op'>)</span>
@@ -228,7 +228,7 @@ chart, default is <code>"black"</code>.</p></td>
    lbl_col <span class='op'>=</span> <span class='st'>"red"</span>,
    border_col <span class='op'>=</span> <span class='st'>"grey"</span>
  <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in loadNamespace(name): there is no package called ‘patternplot’</span></div><div class='input'>
+</div><div class='img'><img src='pie_addimages-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
