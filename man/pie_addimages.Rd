@@ -13,7 +13,7 @@ pie_addimages(
 )
 }
 \arguments{
-\item{mypie}{A ggplot object. The output from \code{\link{pie_bake}} function,
+\item{mypie}{A ggplot object. The output from \code{\link{pie_bake}},
 \strong{NOT from \code{\link{pie_bake_pro}}}. \cr
 Don't focus on the template, only lables and values will be inherited.}
 
@@ -22,9 +22,9 @@ used to fill slices.}
 
 \item{perc}{You can choose among:\cr
 \itemize{
-\item 'no'    : the percentages won't be displayed (default choice);
-\item 'below' : the percentages will be displayed below the group labels;
-\item 'right' : the percentages will be displayed next to the group labels.
+\item \code{'no'}    : the percentages won't be displayed (default choice);
+\item \code{'below'} : the percentages will be displayed below the group labels;
+\item \code{'right'} : the percentages will be displayed next to the group labels.
 }}
 
 \item{lbl_col}{A string containing the chosen color for the labels, default is
