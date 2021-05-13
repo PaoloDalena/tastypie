@@ -65,6 +65,7 @@
 #' @importFrom dplyr desc
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom shadowtext geom_shadowtext
+#' @importFrom fmsb radarchart
 pie_bake_pro <- function(
   data,
   template,
