@@ -8,4 +8,6 @@ utils::globalVariables(c("group",
                          "labelPosition",
                          "x",
                          "y",
-                         "id"))
+                         "id",
+                         "individual",
+                         "hjust"))
