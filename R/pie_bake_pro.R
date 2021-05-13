@@ -55,6 +55,11 @@
 #'   group_name = "GROUPS:"
 #' )
 #'
+#' pie_bake_pro(
+#'   data = example,
+#'   template = "spider2"
+#'   )
+#'
 #'
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc
@@ -79,7 +84,7 @@ pie_bake_pro <- function(
  Type pie_template_list_pro to see all the available templates for this function.
  Type pie_template_list to see all the available templates for the function pie_bake().")
   }
-  else if(!template %in% c(pie_template_list_pro, "cirbar1", "cirbar2", "cirbar3", "cirbar4", "cirbar5")){
+  else if(!template %in% c(pie_template_list_pro)){
     stop("\n The selected template does NOT exist.
  Type pie_template_list_pro to see all the available templates for this function.
  Type pie_template_list to see all the available templates for the function pie_bake().")
@@ -563,5 +568,126 @@ pie_bake_pro <- function(
         alpha = 1, size = 4,
         angle= label_data$angle, inherit.aes = FALSE) +
       ggtitle(title)
+  }
+  # spider chart ----
+  else if(template == "spider1"){
+    lbls <- paste(data_n$group, data_n$value, sep = " : ")
+    lbls <- paste(lbls, "%", sep = "")
+
+    b <- matrix(nrow = 3,
+                ncol = length(data$value),
+                dimnames = list(c("min", "max", "value"), lbls)
+    )
+    b[1,] <- rep(max(data_n$value), length(data_n$value))
+    b[2,] <- rep(0, length(data_n$value))
+    b[3,] <- data_n$value
+    b <- as.data.frame(b)
+
+    radarchart(b,
+               axistype = 1,
+               pcol = "darkred",
+               pfcol = alpha("orangered", 0.7),
+               plwd = 3,
+               cglcol = "darkred",
+               cglty = 1,
+               axislabcol = "darkred",
+               cglwd = 0.5,
+               caxislabels=seq(0,max(b[3,]), length.out = 5))
+  }
+  else if(template == "spider2"){
+    lbls <- paste(data_n$group, data_n$value, sep = " : ")
+    lbls <- paste(lbls, "%", sep = "")
+
+    b <- matrix(nrow = 3,
+                ncol = length(data$value),
+                dimnames = list(c("min", "max", "value"), lbls)
+    )
+    b[1,] <- rep(max(data_n$value), length(data_n$value))
+    b[2,] <- rep(0, length(data_n$value))
+    b[3,] <- data_n$value
+    b <- as.data.frame(b)
+
+    radarchart(b,
+               axistype = 1,
+               pcol = "darkolivegreen",
+               pfcol = alpha("darkcyan", 0.3),
+               plwd = 2,
+               cglcol = "grey",
+               cglty = 4,
+               axislabcol = "black",
+               cglwd = 2,
+               caxislabels=seq(0,max(b[3,]), length.out = 5))
+  }
+  else if(template == "spider3"){
+    lbls <- paste(data_n$group, data_n$value, sep = " : ")
+    lbls <- paste(lbls, "%", sep = "")
+
+    b <- matrix(nrow = 3,
+                ncol = length(data$value),
+                dimnames = list(c("min", "max", "value"), lbls)
+    )
+    b[1,] <- rep(max(data_n$value), length(data_n$value))
+    b[2,] <- rep(0, length(data_n$value))
+    b[3,] <- data_n$value
+    b <- as.data.frame(b)
+
+    radarchart(b,
+               axistype = 0,
+               pcol = "skyblue",
+               pfcol = alpha("skyblue", 0.3),
+               plwd = 3,
+               cglcol = "grey2",
+               cglty = 3,
+               cglwd = 2
+    )
+  }
+  else if(template == "spider4"){
+    lbls <- paste(data_n$group, data_n$value, sep = " : ")
+    lbls <- paste(lbls, "%", sep = "")
+
+    b <- matrix(nrow = 3,
+                ncol = length(data$value),
+                dimnames = list(c("min", "max", "value"), lbls)
+    )
+    b[1,] <- rep(max(data_n$value), length(data_n$value))
+    b[2,] <- rep(0, length(data_n$value))
+    b[3,] <- data_n$value
+    b <- as.data.frame(b)
+
+    radarchart(b,
+               axistype = 1,
+               pcol = "red",
+               plwd = 4,
+               cglcol = "grey",
+               cglty = 1,
+               axislabcol = "black",
+               cglwd = 0.5,
+               caxislabels=seq(0,max(b[3,]), length.out = 5)
+               )
+  }
+  else if(template == "spider5"){
+    lbls <- paste(data_n$group, data_n$value, sep = " : ")
+    lbls <- paste(lbls, "%", sep = "")
+
+    b <- matrix(nrow = 3,
+                ncol = length(data$value),
+                dimnames = list(c("min", "max", "value"), lbls)
+    )
+    b[1,] <- rep(max(data_n$value), length(data_n$value))
+    b[2,] <- rep(0, length(data_n$value))
+    b[3,] <- data_n$value
+    b <- as.data.frame(b)
+
+    radarchart(b,
+               axistype = 1,
+               pcol = "deeppink",
+               pfcol = alpha("pink", 0.3),
+               plwd = 2,
+               cglcol = "black",
+               cglty = 6,
+               axislabcol = "deeppink",
+               cglwd = 2,
+               caxislabels=seq(0,max(b[3,]), length.out = 5)
+    )
   }
 }

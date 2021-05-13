@@ -62,6 +62,11 @@ pie_bake_pro(
   group_name = "GROUPS:"
 )
 
+pie_bake_pro(
+  data = example,
+  template = "spider2"
+  )
+
 
 }
 \seealso{

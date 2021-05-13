@@ -5,7 +5,7 @@
 \alias{pie_template_list_pro}
 \title{Available templates in \code{tastypie} for \code{pie_bake_pro}.}
 \format{
-An object of class \code{character} of length 20.
+An object of class \code{character} of length 30.
 }
 \usage{
 pie_template_list_pro
