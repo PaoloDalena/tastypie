@@ -49,8 +49,9 @@
 <meta property="og:title" content="Add images to pie charts — pie_addimages" />
 <meta property="og:description" content="This function allows to easily add some figures to you pie chart, taking information
 from the output of the pie_bake function.
-You can also customize the chart by specifying the colors of borders and labels
-and where (and if) you want to print the percentages for each group." />
+You can also customize the chart by specifying the colors of borders and labels, the
+title of the pie chart and where (and if) you want to print the percentages
+for each group." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -158,8 +159,9 @@ and where (and if) you want to print the percentages for each group." />
     <div class="ref-description">
     <p>This function allows to easily add some figures to you pie chart, taking information
 from the output of the <code><a href='pie_bake.html'>pie_bake</a></code> function.
-You can also customize the chart by specifying the colors of borders and labels
-and where (and if) you want to print the percentages for each group.</p>
+You can also customize the chart by specifying the colors of borders and labels, the
+title of the pie chart and where (and if) you want to print the percentages
+for each group.</p>
     </div>
 
     <pre class="usage"><span class='fu'>pie_addimages</span><span class='op'>(</span>
@@ -167,7 +169,8 @@ and where (and if) you want to print the percentages for each group.</p>
   <span class='va'>imglist</span>,
   perc <span class='op'>=</span> <span class='st'>"no"</span>,
   lbl_col <span class='op'>=</span> <span class='st'>"black"</span>,
-  border_col <span class='op'>=</span> <span class='st'>"black"</span>
+  border_col <span class='op'>=</span> <span class='st'>"black"</span>,
+  title <span class='op'>=</span> <span class='st'>""</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -177,12 +180,13 @@ and where (and if) you want to print the percentages for each group.</p>
       <th>mypie</th>
       <td><p>A ggplot object. The output from <code><a href='pie_bake.html'>pie_bake</a></code>,
 <strong>NOT from <code><a href='pie_bake_pro.html'>pie_bake_pro</a></code></strong>. <br />
-Don't focus on the template, only lables and values will be inherited.</p></td>
+Don't focus on the template, only labels and values will be inherited.</p></td>
     </tr>
     <tr>
       <th>imglist</th>
       <td><p>A list of objects returned by and <code><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></code>
-used to fill slices.</p></td>
+used to fill slices. For optimal and fast results, we recommend the use of
+small files (5-10 kB).</p></td>
     </tr>
     <tr>
       <th>perc</th>
@@ -202,33 +206,61 @@ used to fill slices.</p></td>
       <td><p>A string containing the chosen color for the border of the pie
 chart, default is <code>"black"</code>.</p></td>
     </tr>
+    <tr>
+      <th>title</th>
+      <td><p>A string. If you want, you can specify the title of the graph.</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A ggplot object.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Please note that this function is based on the <code><a href='https://rdrr.io/pkg/patternplot/man/imagepie.html'>imagepie</a></code>
+function.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>img1</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"mark.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>img2</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"brownie.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>img3</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"logo.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>imgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img1</span>,<span class='va'>img2</span>,<span class='va'>img3</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='va'>img1</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"logo.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>img2</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"parents.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>img3</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"bob.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>img4</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"mark.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>imgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img1</span>,<span class='va'>img2</span>,<span class='va'>img3</span>, <span class='va'>img4</span><span class='op'>)</span>
 
- <span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
-   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mark fan"</span>, <span class='st'>"My brownie"</span>, <span class='st'>"Tastypie logo"</span><span class='op'>)</span>,
-   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>500</span>, <span class='fl'>200</span>, <span class='fl'>300</span><span class='op'>)</span>
- <span class='op'>)</span>
+<span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mark fan"</span>, <span class='st'>"My friend"</span>, <span class='st'>"Tastypie logo"</span>, <span class='st'>"My parents"</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>300</span>, <span class='fl'>250</span>, <span class='fl'>225</span>, <span class='fl'>325</span><span class='op'>)</span>
+<span class='op'>)</span>
 
- <span class='va'>mypie</span> <span class='op'>&lt;-</span> <span class='fu'><a href='pie_bake.html'>pie_bake</a></span><span class='op'>(</span><span class='va'>df</span>, template <span class='op'>=</span> <span class='st'>"basic1"</span><span class='op'>)</span>
+<span class='va'>mypie</span> <span class='op'>&lt;-</span> <span class='fu'><a href='pie_bake.html'>pie_bake</a></span><span class='op'>(</span><span class='va'>df</span>, template <span class='op'>=</span> <span class='st'>"basic1"</span><span class='op'>)</span>
 
- <span class='fu'>pie_addimages</span><span class='op'>(</span>
-   mypie <span class='op'>=</span> <span class='va'>mypie</span>,
-   imglist <span class='op'>=</span> <span class='va'>imgs</span>,
-   perc <span class='op'>=</span> <span class='st'>"below"</span>,
-   lbl_col <span class='op'>=</span> <span class='st'>"red"</span>,
-   border_col <span class='op'>=</span> <span class='st'>"grey"</span>
- <span class='op'>)</span>
+<span class='fu'>pie_addimages</span><span class='op'>(</span>
+  mypie <span class='op'>=</span> <span class='va'>mypie</span>,
+  imglist <span class='op'>=</span> <span class='va'>imgs</span>,
+  perc <span class='op'>=</span> <span class='st'>"below"</span>,
+  lbl_col <span class='op'>=</span> <span class='st'>"red"</span>,
+  border_col <span class='op'>=</span> <span class='st'>"grey"</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='pie_addimages-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>img5</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"pie.jpeg"</span>, package <span class='op'>=</span> <span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>imgs2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img5</span>, <span class='va'>img5</span>, <span class='va'>img5</span><span class='op'>)</span>
+
+<span class='va'>df2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A"</span>, <span class='st'>"B"</span>, <span class='st'>"C"</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>300</span>, <span class='fl'>250</span>, <span class='fl'>600</span><span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='va'>mypie2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='pie_bake.html'>pie_bake</a></span><span class='op'>(</span><span class='va'>df2</span>, template <span class='op'>=</span> <span class='st'>"rainbow1"</span><span class='op'>)</span>
+
+<span class='fu'>pie_addimages</span><span class='op'>(</span>
+  mypie <span class='op'>=</span> <span class='va'>mypie2</span>,
+  imglist <span class='op'>=</span> <span class='va'>imgs2</span>,
+  perc <span class='op'>=</span> <span class='st'>"right"</span>,
+  lbl_col <span class='op'>=</span> <span class='st'>"darkcyan"</span>,
+  border_col <span class='op'>=</span> <span class='st'>"orangered"</span>,
+  title <span class='op'>=</span> <span class='st'>"Example"</span>
+<span class='op'>)</span>
+</div><div class='img'><img src='pie_addimages-2.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
