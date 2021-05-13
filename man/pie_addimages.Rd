@@ -9,16 +9,18 @@ pie_addimages(
   imglist,
   perc = "no",
   lbl_col = "black",
-  border_col = "black"
+  border_col = "black",
+  title = ""
 )
 }
 \arguments{
 \item{mypie}{A ggplot object. The output from \code{\link{pie_bake}},
 \strong{NOT from \code{\link{pie_bake_pro}}}. \cr
-Don't focus on the template, only lables and values will be inherited.}
+Don't focus on the template, only labels and values will be inherited.}
 
 \item{imglist}{A list of objects returned by and \code{\link[jpeg]{readJPEG}}
-used to fill slices.}
+used to fill slices. For optimal and fast results, we recommend the use of
+small files (5-10 kB).}
 
 \item{perc}{You can choose among:\cr
 \itemize{
@@ -32,6 +34,8 @@ used to fill slices.}
 
 \item{border_col}{A string containing the chosen color for the border of the pie
 chart, default is \code{"black"}.}
+
+\item{title}{A string. If you want, you can specify the title of the graph.}
 }
 \value{
 A ggplot object.
@@ -39,28 +43,53 @@ A ggplot object.
 \description{
 This function allows to easily add some figures to you pie chart, taking information
 from the output of the \code{\link{pie_bake}} function.
-You can also customize the chart by specifying the colors of borders and labels
-and where (and if) you want to print the percentages for each group.
+You can also customize the chart by specifying the colors of borders and labels, the
+title of the pie chart and where (and if) you want to print the percentages
+for each group.
 }
 \examples{
-img1 <- jpeg::readJPEG(system.file("img", "mark.jpeg", package="tastypie"))
-img2 <- jpeg::readJPEG(system.file("img", "brownie.jpeg", package="tastypie"))
-img3 <- jpeg::readJPEG(system.file("img", "logo.jpeg", package="tastypie"))
-imgs <- list(img1,img2,img3)
+img1 <- jpeg::readJPEG(system.file("img", "logo.jpeg", package="tastypie"))
+img2 <- jpeg::readJPEG(system.file("img", "parents.jpeg", package="tastypie"))
+img3 <- jpeg::readJPEG(system.file("img", "bob.jpeg", package="tastypie"))
+img4 <- jpeg::readJPEG(system.file("img", "mark.jpeg", package="tastypie"))
+imgs <- list(img1,img2,img3, img4)
 
- df <- data.frame(
-   c("Mark fan", "My brownie", "Tastypie logo"),
-   c(500, 200, 300)
- )
+df <- data.frame(
+  c("Mark fan", "My friend", "Tastypie logo", "My parents"),
+  c(300, 250, 225, 325)
+)
 
- mypie <- pie_bake(df, template = "basic1")
+mypie <- pie_bake(df, template = "basic1")
 
- pie_addimages(
-   mypie = mypie,
-   imglist = imgs,
-   perc = "below",
-   lbl_col = "red",
-   border_col = "grey"
- )
+pie_addimages(
+  mypie = mypie,
+  imglist = imgs,
+  perc = "below",
+  lbl_col = "red",
+  border_col = "grey"
+)
 
+img5 <- jpeg::readJPEG(system.file("img", "pie.jpeg", package = "tastypie"))
+imgs2 <- list(img5, img5, img5)
+
+df2 <- data.frame(
+  c("A", "B", "C"),
+  c(300, 250, 600)
+)
+
+mypie2 <- pie_bake(df2, template = "rainbow1")
+
+pie_addimages(
+  mypie = mypie2,
+  imglist = imgs2,
+  perc = "right",
+  lbl_col = "darkcyan",
+  border_col = "orangered",
+  title = "Example"
+)
+
+}
+\seealso{
+Please note that this function is based on the \code{\link[patternplot]{imagepie}}
+function.
 }
