@@ -44,7 +44,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">tastypie</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -106,6 +106,10 @@
 </h1></div>
 <!-- badges: start -->
 
+<ul>
+<li>Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: check out what’s new in <a href="https://paolodalena.github.io/tastypie/">tastypie</a> <code>0.1.0</code> <a href="https://paolodalena.github.io/tastypie/news/index.html">here</a>!</li>
+<li>Would you like to join the <a href="https://paolodalena.github.io/tastypie/">tastypie</a> crew and get a free <code>tasty_tshirt</code>? Find out the details <a href="https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html">here</a>.</li>
+</ul>
 <p>You only need to type <em>“why pie charts are bad”</em> on <a href="https://www.google.com/search?q=why+pie+charts+are+bad">Google</a> to find thousands of articles full of (very valid) reasons why this type of chart should not be used.<br><a href="https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg">However</a>, my mother, a high school teacher of Latin and Italian Literature, swears she understands more from something like this:</p>
 <p><img src="reference/figures/pie_readme.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>than from something like this:</p>
@@ -196,24 +200,39 @@ Due to the little use because of the already mentioned reasons, making pie (and 
   <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2.9</span>, <span class="fl">6.9</span>, <span class="fl">4.20</span>, <span class="fl">13.12</span>, <span class="fl">6.66</span><span class="op">)</span>
 <span class="op">)</span>
 
-<span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"red1"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,
+<span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"basic4"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,
          title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Or, if you want something more extravagant (<em>but probably less understandable</em>), choose a template and try <strong><code><a href="reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"red1"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,
+         title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-8-2.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Or, if you want something more extravagant (<em>but probably less understandable</em>), choose a template and try <strong><code><a href="reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"dart5"</span>,
              title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Not sure which template to choose? Run <strong><code><a href="reference/pie_discover.html">pie_discover()</a></code></strong> to find out a random combination of templates, number of groups and features and get an idea of the many available plots:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_discover.html">pie_discover</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-11-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Want to display an example of a particular template with particular features? Try <strong><code><a href="reference/pie_templates.html">pie_templates()</a></code></strong>:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_templates.html">pie_templates</a></span><span class="op">(</span><span class="st">"eaten4"</span>, n_groups <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<p>Do you want a list of all the available templates? Check the <strong><code>pie_template_list</code></strong> and the <strong><code>pie_template_list_pro</code></strong> vectors!</p>
+<code class="sourceCode R"><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"cirbar3"</span>, title <span class="op">=</span> <span class="st">"Perhaps she"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-9-2.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Or, if you are interested in a circular packing chart, you can easily do it with the <strong><code>bubble_blow</code></strong> function:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">exblow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
+  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>,
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span>, <span class="fl">88</span>, <span class="fl">66</span>, <span class="fl">78</span><span class="op">)</span>
+<span class="op">)</span>
+<span class="fu"><a href="reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="st">"bub2"</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="st">"Easy bubbles:"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Not sure which template to choose? Run <strong><code><a href="reference/pie_discover.html">pie_discover()</a></code></strong> to find out a random combination of templates, number of groups and features and get an idea of the many available plots:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/pie_discover.html">pie_discover</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Want to display an example of a particular template with particular features? Try <strong><code><a href="reference/pie_templates.html">pie_templates()</a></code></strong>:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/pie_templates.html">pie_templates</a></span><span class="op">(</span><span class="st">"eaten4"</span>, n_groups <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-13-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+<p>Do you want a list of all the available templates? Check the <strong><code>pie_template_list</code></strong> and the <strong><code>pie_template_list_pro</code></strong> vectors!</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pie_template_list</span> <span class="co"># to be used with pie_bake()</span>
 <span class="co">#&gt;  [1] "basic1"   "basic2"   "basic3"   "basic4"   "basic5"   "bw1"     </span>
 <span class="co">#&gt;  [7] "bw2"      "bw3"      "bw4"      "bw5"      "blue1"    "blue2"   </span>
@@ -225,7 +244,9 @@ Due to the little use because of the already mentioned reasons, making pie (and 
 <span class="co">#&gt;  [1] "eaten1"      "eaten2"      "eaten3"      "eaten4"      "eaten5"     </span>
 <span class="co">#&gt;  [6] "dart1"       "dart2"       "dart3"       "dart4"       "dart5"      </span>
 <span class="co">#&gt; [11] "eye1"        "eye2"        "eye3"        "eye4"        "eye5"       </span>
-<span class="co">#&gt; [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"</span></code></pre></div>
+<span class="co">#&gt; [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"</span>
+<span class="co">#&gt; [21] "cirbar1"     "cirbar2"     "cirbar3"     "cirbar4"     "cirbar5"    </span>
+<span class="co">#&gt; [26] "spider1"     "spider2"     "spider3"     "spider4"     "spider5"</span></code></pre></div>
 <p>Do you want to see all possible templates displayed? <a href="https://paolodalena.github.io/tastypie/articles/available_templates.html">Here</a> you can find what you are looking for.</p>
 <p><strong>Be curious, there are many tasty pies!</strong></p>
 </div>
@@ -272,7 +293,7 @@ Due to the little use because of the already mentioned reasons, making pie (and 
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=tastypie"><img src="https://www.r-pkg.org/badges/version/tastypie" alt="CRAN status"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
-<li><a href="https://github.com/PaoloDalena/tastypie"><img src="https://img.shields.io/badge/devel%20version-0.0.3-green.svg"></a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie"><img src="https://img.shields.io/badge/devel%20version-0.1.0-green.svg"></a></li>
 <li><a href="https://cran.r-project.org/web/licenses/GPL-3"><img src="https://img.shields.io/badge/license-GPL--3-yellow.svg" alt="License: GPL-3"></a></li>
 <li><a href="https://github.com/PaoloDalena/tastypie"><img src="https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg"></a></li>
 <li><a href="https://github.com/PaoloDalena/tastypie/actions"><img src="https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
