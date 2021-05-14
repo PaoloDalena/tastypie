@@ -8,12 +8,20 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![](https://img.shields.io/badge/devel%20version-0.0.3-green.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/badge/devel%20version-0.1.0-green.svg)](https://github.com/PaoloDalena/tastypie)
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 <!-- badges: end -->
+
+  - Add figures to the pie charts, easily create circular packing
+    charts, radar charts and circular barplots: check out what’s new in
+    `{tastypie}` `0.1.0`
+    [here](https://paolodalena.github.io/tastypie/news/index.html)\!
+  - Would you like to join the `{tastypie}` crew and get a free
+    `tasty_tshirt`? Find out the details
+    [here](https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html).
 
 You only need to type *“why pie charts are bad”* on
 [Google](https://www.google.com/search?q=why+pie+charts+are+bad) to find
@@ -185,11 +193,18 @@ example <- data.frame(
   c(2.9, 6.9, 4.20, 13.12, 6.66)
 )
 
-pie_bake(data = example, template = "red1", perc = TRUE,
+pie_bake(data = example, template = "basic4", perc = TRUE,
          title = "Perhaps", group_name = "She")
 ```
 
 <img src="man/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
+``` r
+pie_bake(data = example, template = "red1", perc = TRUE,
+         title = "Perhaps", group_name = "She")
+```
+
+<img src="man/figures/README-unnamed-chunk-8-2.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Or, if you want something more extravagant (*but probably less
 understandable*), choose a template and try **`pie_bake_pro()`**:
@@ -201,6 +216,25 @@ pie_bake_pro(data = example, template = "dart5",
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
+``` r
+pie_bake_pro(data = example, template = "cirbar3", title = "Perhaps she")
+```
+
+<img src="man/figures/README-unnamed-chunk-9-2.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
+Or, if you are interested in a circular packing chart, you can easily do
+it with the **`bubble_blow`** function:
+
+``` r
+exblow <- data.frame(
+  LETTERS[1:8],
+  c(33, 24, 54, 12, 43, 88, 66, 78)
+)
+bubble_blow(exblow, template = "bub2", perc = "below", title = "Easy bubbles:")
+```
+
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+
 Not sure which template to choose? Run **`pie_discover()`** to find out
 a random combination of templates, number of groups and features and get
 an idea of the many available plots:
@@ -209,7 +243,7 @@ an idea of the many available plots:
 pie_discover()
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Want to display an example of a particular template with particular
 features? Try **`pie_templates()`**:
@@ -218,7 +252,7 @@ features? Try **`pie_templates()`**:
 pie_templates("eaten4", n_groups = 9)
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="75%" height="75%" style="display: block; margin: auto;" />
 
 Do you want a list of all the available templates? Check the
 **`pie_template_list`** and the **`pie_template_list_pro`** vectors\!
@@ -236,6 +270,8 @@ pie_template_list_pro # to be used with pie_bake_pro()
 #>  [6] "dart1"       "dart2"       "dart3"       "dart4"       "dart5"      
 #> [11] "eye1"        "eye2"        "eye3"        "eye4"        "eye5"       
 #> [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"
+#> [21] "cirbar1"     "cirbar2"     "cirbar3"     "cirbar4"     "cirbar5"    
+#> [26] "spider1"     "spider2"     "spider3"     "spider4"     "spider5"
 ```
 
 Do you want to see all possible templates displayed?

@@ -26,6 +26,12 @@ library(knitr)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 <!-- badges: end -->
 
+* Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: check out what's new in `{tastypie}` `0.1.0` [here](https://paolodalena.github.io/tastypie/news/index.html)!
+* Would you like to join the `{tastypie}` crew and get a free `tasty_tshirt`? Find out the details [here](https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html).
+
+
+
+
 You only need to type *"why pie charts are bad"* on [Google](https://www.google.com/search?q=why+pie+charts+are+bad) to find thousands of articles full of (very valid) reasons why this type of chart should not be used.  
 [However](https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg), my mother, a high school teacher of Latin and Italian Literature, swears she understands more from something like this:
 
@@ -86,6 +92,8 @@ example <- data.frame(
   c(2.9, 6.9, 4.20, 13.12, 6.66)
 )
 
+pie_bake(data = example, template = "basic4", perc = TRUE,
+         title = "Perhaps", group_name = "She")
 pie_bake(data = example, template = "red1", perc = TRUE,
          title = "Perhaps", group_name = "She")
 ```
@@ -95,8 +103,18 @@ Or, if you want something more extravagant (*but probably less understandable*),
 ```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 400}
 pie_bake_pro(data = example, template = "dart5",
              title = "Perhaps", group_name = "She")
+pie_bake_pro(data = example, template = "cirbar3", title = "Perhaps she")
 ```
 
+Or, if you are interested in a circular packing chart, you can easily do it with the **`bubble_blow`** function:
+
+```{r, out.width="75%", out.height="75%", fig.align = "center", dpi = 400}
+exblow <- data.frame(
+  LETTERS[1:8],
+  c(33, 24, 54, 12, 43, 88, 66, 78)
+)
+bubble_blow(exblow, template = "bub2", perc = "below", title = "Easy bubbles:")
+```
 
 Not sure which template to choose? Run **`pie_discover()`** to find out a random combination of templates, number of groups and features and get an idea of the many available plots:  
   
