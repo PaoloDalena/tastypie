@@ -1,6 +1,6 @@
 Package: tastypie
 Title: Easy Pie Charts
-Version: 1.0.0
+Version: 0.1.0
 Authors@R: 
     person(given = "Paolo",
            family = "Dalena",
