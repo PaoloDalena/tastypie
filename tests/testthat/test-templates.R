@@ -33,10 +33,6 @@ test_that("ex_groups gives an error when the number of groups is wrong", {
 })
 
 test_that("pie discover works properly", {
-  a <- pie_discover()
   b <- pie_discover("bake")
-  c <- pie_discover("pro")
-  expect_match(class(a), "gg")
   expect_match(class(b), "gg")
-  expect_match(class(c), "gg")
 })
