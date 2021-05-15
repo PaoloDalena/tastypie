@@ -111,12 +111,13 @@
 
     
     
+<p>In the following you can find a comprehensive visualization of all the possible templates that you can access using <strong><code><a href="../reference/pie_bake.html">pie_bake()</a></code></strong>, <strong><code><a href="../reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>, <strong><code><a href="../reference/bubble_blow.html">bubble_blow()</a></code></strong> and an example of the usage of <strong><code><a href="../reference/pie_addimages.html">pie_addimages()</a></code></strong>.<br>
+Please note that the quality of the images is deliberately reduced compared to the classic quality of the function outputs for issues related to the size of the files.</p>
 <div id="available-templates-for-pie_bake" class="section level2">
 <h2 class="hasAnchor">
 <a href="#available-templates-for-pie_bake" class="anchor"></a>Available templates for <strong><code>pie_bake()</code></strong>
 </h2>
-<p>Here you can find a comprehensive visualization of all the possible templates that you can access using <strong><code><a href="../reference/pie_bake.html">pie_bake()</a></code></strong>.<br>
-A fairly simple data frame with 5 groups will be considered. Percentages will be displayed (i.e. the argument <code>perc</code> will be fixed to <code>TRUE</code>), with the title corresponding to the template name and a generic group name (i.e. “groups”).</p>
+<p>A fairly simple data frame with 5 groups will be considered. Percentages will be displayed (i.e. the argument <code>perc</code> will be fixed to <code>TRUE</code>), with the title corresponding to the template name and a generic group name (i.e. “groups”).</p>
 <p><em>The same for the</em> <strong><code><a href="../reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong> <em>function can be found by scrolling down.</em></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/">tastypie</a></span><span class="op">)</span>
@@ -184,6 +185,35 @@ A fairly simple data frame with 5 groups will be considered. Percentages will be
   <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="va">i</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span>
 <span class="op">}</span></code></pre></div>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-4-1.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-2.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-3.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-4.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-5.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
+</div>
+<div id="example-of-usage-of-pie_addimages" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example-of-usage-of-pie_addimages" class="anchor"></a>Example of usage of <strong><code>pie_addimages()</code></strong>
+</h2>
+<p>At first, let’s create a list of jpeg images loaded using the function <code>readJPEG</code> (for optimal and fast results, the use of small files is recommended) :</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">img1</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"logo.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">img2</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"parents.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">img3</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"bob.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">img4</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"mark.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">imgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">img1</span>,<span class="va">img2</span>,<span class="va">img3</span>, <span class="va">img4</span><span class="op">)</span></code></pre></div>
+<p>Then, let’s create the ggplot object using <code><a href="../reference/pie_bake.html">pie_bake()</a></code> (without focusing on the template or other specifications, since only labels and values will be used):</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mark fan"</span>, <span class="st">"My friend"</span>, <span class="st">"Tastypie logo"</span>, <span class="st">"My parents"</span><span class="op">)</span>,
+  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">250</span>, <span class="fl">225</span>, <span class="fl">325</span><span class="op">)</span>
+<span class="op">)</span>
+<span class="va">mypie</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pie_bake.html">pie_bake</a></span><span class="op">(</span><span class="va">df</span>, template <span class="op">=</span> <span class="st">"basic1"</span><span class="op">)</span></code></pre></div>
+<p>Now it is possible to run p<strong><code><a href="../reference/pie_addimages.html">pie_addimages()</a></code></strong> using the list of the images and the created pie chart, selecting also the colours of the graph’s borders and labels:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/pie_addimages.html">pie_addimages</a></span><span class="op">(</span>
+  mypie <span class="op">=</span> <span class="va">mypie</span>,
+  imglist <span class="op">=</span> <span class="va">imgs</span>,
+  perc <span class="op">=</span> <span class="st">"below"</span>,
+  lbl_col <span class="op">=</span> <span class="st">"red"</span>,
+  border_col <span class="op">=</span> <span class="st">"grey"</span>
+<span class="op">)</span> </code></pre></div>
+<p><img src="available_templates_files/figure-html/unnamed-chunk-7-1.png" width="437.5"></p>
 </div>
   </div>
 

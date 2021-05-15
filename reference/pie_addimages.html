@@ -221,28 +221,7 @@ chart, default is <code>"black"</code>.</p></td>
 function.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>img1</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"logo.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>img2</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"parents.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>img3</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"bob.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>img4</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"mark.jpeg"</span>, package<span class='op'>=</span><span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>imgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img1</span>,<span class='va'>img2</span>,<span class='va'>img3</span>, <span class='va'>img4</span><span class='op'>)</span>
-
-<span class='va'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Mark fan"</span>, <span class='st'>"My friend"</span>, <span class='st'>"Tastypie logo"</span>, <span class='st'>"My parents"</span><span class='op'>)</span>,
-  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>300</span>, <span class='fl'>250</span>, <span class='fl'>225</span>, <span class='fl'>325</span><span class='op'>)</span>
-<span class='op'>)</span>
-
-<span class='va'>mypie</span> <span class='op'>&lt;-</span> <span class='fu'><a href='pie_bake.html'>pie_bake</a></span><span class='op'>(</span><span class='va'>df</span>, template <span class='op'>=</span> <span class='st'>"basic1"</span><span class='op'>)</span>
-
-<span class='fu'>pie_addimages</span><span class='op'>(</span>
-  mypie <span class='op'>=</span> <span class='va'>mypie</span>,
-  imglist <span class='op'>=</span> <span class='va'>imgs</span>,
-  perc <span class='op'>=</span> <span class='st'>"below"</span>,
-  lbl_col <span class='op'>=</span> <span class='st'>"red"</span>,
-  border_col <span class='op'>=</span> <span class='st'>"grey"</span>
-<span class='op'>)</span>
-</div><div class='img'><img src='pie_addimages-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='va'>img5</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"pie.jpeg"</span>, package <span class='op'>=</span> <span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='va'>img5</span> <span class='op'>&lt;-</span> <span class='fu'>jpeg</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/jpeg/man/readJPEG.html'>readJPEG</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span><span class='st'>"img"</span>, <span class='st'>"pie.jpeg"</span>, package <span class='op'>=</span> <span class='st'>"tastypie"</span><span class='op'>)</span><span class='op'>)</span>
 <span class='va'>imgs2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>img5</span>, <span class='va'>img5</span>, <span class='va'>img5</span><span class='op'>)</span>
 
 <span class='va'>df2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
@@ -260,7 +239,7 @@ function.</p></div>
   border_col <span class='op'>=</span> <span class='st'>"orangered"</span>,
   title <span class='op'>=</span> <span class='st'>"Example"</span>
 <span class='op'>)</span>
-</div><div class='img'><img src='pie_addimages-2.png' alt='' width='700' height='433' /></div><div class='input'>
+</div><div class='img'><img src='pie_addimages-1.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
