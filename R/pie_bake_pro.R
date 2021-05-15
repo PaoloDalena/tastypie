@@ -23,7 +23,7 @@
 #' @export
 #'
 #' @return
-#' A ggplot object.
+#' A ggplot object (or no value if the chosen template is among the spider chart ones).
 #' In particular, this function returns a pie (or similar) chart according to the
 #' data, the choice of template, and the other specifications provided.
 #'
