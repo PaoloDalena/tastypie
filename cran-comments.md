@@ -1,3 +1,23 @@
+# Version 0.1.0
+
+In this version I have:
+
+* added functions for adding images to the pie charts and for creating circular packing charts
+* added some features to already existing functions for creating circular barplots and radar charts
+* updated and made useful changes to vignettes and documentation of some functions.
+
+(More details in the NEWS file).
+
+## Test environments
+* local OS X install, R 4.0.3
+* win-builder (devel and release)
+* Ubuntu Linux 20.04.1 LTS, R-release, GCC
+* Fedora Linux, R-devel, clang, gfortran
+* Windows Server 2008 R2 SP1, R-devel, 32/64 bit
+
+## R CMD check results
+0 errors | 0 warnings | 0 note
+
 # Version 0.0.3
 
 In this version I have:
