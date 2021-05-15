@@ -9,7 +9,15 @@
 ^\.github$
 ^vignettes/your_favourite_template\.Rmd$
 ^vignettes/tasty_tshirts\.Rmd$
+^vignettes/shirt0\.png$
+^vignettes/shirt1\.png$
+^vignettes/shirt2\.png$
+^vignettes/shirt3\.png$
+^vignettes/shirt4\.png$
+^vignettes/shirt5\.png$
 ^LICENSE$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
 ^site_figs$
+^doc$
+^Meta$
