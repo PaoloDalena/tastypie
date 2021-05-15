@@ -25,7 +25,7 @@ If this is not the case, go look at it, and maybe follow it.
 
 <center><img src="https://github.com/PaoloDalena/tastypie/blob/main/vignettes/shirt0.png?raw=true" width = "90%"></center>
 
-The `tasty t-shirts` are available in black, blue and grey.
+The `tasty t-shirts` are available in black, blue and gray.
 Some people with no taste might say that they are simply a plain T-shirt with the `tastypie` logo, but the real experts know that this is the latest fashion trend and would do anything to get one.
 
 ## How to get one **for free**
