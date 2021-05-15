@@ -278,6 +278,10 @@ Do you want to see all possible templates displayed?
 [Here](https://paolodalena.github.io/tastypie/articles/available_templates.html)
 you can find what you are looking for.
 
+Do you want to add some images to your tasty pie chart? You can do it
+easily with **`pie_addimages()`**\! Check out an example of how to do it
+[here](https://paolodalena.github.io/tastypie/articles/available_templates.html#example-of-usage-of-pie-addimages-).
+
 **Be curious, there are many tasty pies\!**
 
 ## Feature request
