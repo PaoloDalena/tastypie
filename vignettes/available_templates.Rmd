@@ -97,7 +97,7 @@ mypie <- pie_bake(df, template = "basic1")
 
 Now it is possible to run p**`pie_addimages()`** using the list of the images and the created pie chart, selecting also the colours of the graph's borders and labels:
 
-```{r}
+```{r, fig.align = "center", out.width="75%", out.height="75%", dpi = 100}
 pie_addimages(
   mypie = mypie,
   imglist = imgs,
