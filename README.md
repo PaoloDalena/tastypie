@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![](https://img.shields.io/badge/devel%20version-0.1.0-green.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/badge/devel%20version-0.1.0-darkolivegreen.svg)](https://github.com/PaoloDalena/tastypie)
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
@@ -16,11 +16,11 @@ GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-p
 <!-- badges: end -->
 
   - Add figures to the pie charts, easily create circular packing
-    charts, radar charts and circular barplots: check out what’s new in
-    `{tastypie}` `0.1.0`
+    charts, radar charts and circular barplots: **check out what’s new
+    in `{tastypie}` `0.1.0`**
     [here](https://paolodalena.github.io/tastypie/news/index.html)\!
-  - Would you like to join the `{tastypie}` crew and get a free
-    `tasty_tshirt`? Find out the details
+  - Would you like to **join the `{tastypie}` crew and get a free
+    `tasty_tshirt`**? Find out the details
     [here](https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html).
 
 You only need to type *“why pie charts are bad”* on

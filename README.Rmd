@@ -20,14 +20,14 @@ library(knitr)
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-`r badge_devel("PaoloDalena/tastypie", "green")`
+`r badge_devel("PaoloDalena/tastypie", "darkolivegreen")`
 `r badge_license("GPL-3", "yellow")`
 `r badge_code_size("PaoloDalena/tastypie")`
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 <!-- badges: end -->
 
-* Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: check out what's new in `{tastypie}` `0.1.0` [here](https://paolodalena.github.io/tastypie/news/index.html)!
-* Would you like to join the `{tastypie}` crew and get a free `tasty_tshirt`? Find out the details [here](https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html).
+* Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: **check out what's new in `{tastypie}` `0.1.0`** [here](https://paolodalena.github.io/tastypie/news/index.html)!
+* Would you like to **join the `{tastypie}` crew and get a free `tasty_tshirt`**? Find out the details [here](https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html).
 
 
 
