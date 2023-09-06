@@ -58,8 +58,6 @@
 #' See all the available templates displayed
 #' \href{https://paolodalena.github.io/tastypie/articles/available_templates.html}{here}!
 #'
-#' @importFrom dplyr arrange
-#' @importFrom dplyr desc
 #' @importFrom utils head
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom shadowtext geom_shadowtext
@@ -92,7 +90,7 @@ pie_bake <- function(
 
   # initial setup
   names(data) <- c("group", "value")
-  data_n <- arrange(data, desc(group))
+  data_n <- data[order(data$group, decreasing = TRUE),,drop = FALSE]
   data_n[,2] <- round(data_n[,2]/sum(data_n[,2])*100, 0)
 
   # without percentage ------------------------------------------
