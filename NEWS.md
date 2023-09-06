@@ -1,3 +1,6 @@
+# tastypie 0.1.1
+* Updated tastypie-package documentation as requesed by R-project community (manually added aliases)
+
 # tastypie 0.1.0
 
 * Added the `pie_addimages` function: you can now easily **add images** to the slices of the pie charts created using `pie_bake`!
