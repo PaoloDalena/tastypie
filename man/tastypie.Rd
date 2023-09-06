@@ -3,6 +3,7 @@
 \docType{package}
 \name{tastypie}
 \alias{tastypie}
+\alias{tastypie-package}
 \title{Easy pie charts with \code{tastypie}}
 \description{
 You only need to type

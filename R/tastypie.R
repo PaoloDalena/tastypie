@@ -19,7 +19,8 @@
 #'
 #' @author
 #' \strong{Author and Maintainer}: Paolo Dalena \email{paolodalena97@gmail.com}
-#'
+#
 #' @docType package
+#' @aliases tastypie-package
 #' @name tastypie
 NULL
