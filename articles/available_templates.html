@@ -32,6 +32,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -44,23 +46,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tastypie</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -83,7 +79,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/PaoloDalena/tastypie/">
+  <a href="https://github.com/PaoloDalena/tastypie/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -98,121 +94,146 @@
 
       
 
-      </header><script src="available_templates_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>available_templates</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/PaoloDalena/tastypie/blob/master/vignettes/available_templates.Rmd"><code>vignettes/available_templates.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/PaoloDalena/tastypie/blob/HEAD/vignettes/available_templates.Rmd" class="external-link"><code>vignettes/available_templates.Rmd</code></a></small>
       <div class="hidden name"><code>available_templates.Rmd</code></div>
 
     </div>
 
     
     
-<p>In the following you can find a comprehensive visualization of all the possible templates that you can access using <strong><code><a href="../reference/pie_bake.html">pie_bake()</a></code></strong>, <strong><code><a href="../reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>, <strong><code><a href="../reference/bubble_blow.html">bubble_blow()</a></code></strong> and an example of the usage of <strong><code><a href="../reference/pie_addimages.html">pie_addimages()</a></code></strong>.<br>
-Please note that the quality of the images is deliberately reduced compared to the classic quality of the function outputs for issues related to the size of the files.</p>
-<div id="available-templates-for-pie_bake" class="section level2">
-<h2 class="hasAnchor">
-<a href="#available-templates-for-pie_bake" class="anchor"></a>Available templates for <strong><code>pie_bake()</code></strong>
+<p>In the following you can find a comprehensive visualization of all
+the possible templates that you can access using
+<strong><code><a href="../reference/pie_bake.html">pie_bake()</a></code></strong>,
+<strong><code><a href="../reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>,
+<strong><code><a href="../reference/bubble_blow.html">bubble_blow()</a></code></strong> and an example of the usage
+of <strong><code><a href="../reference/pie_addimages.html">pie_addimages()</a></code></strong>.<br>
+Please note that the quality of the images is deliberately reduced
+compared to the classic quality of the function outputs for issues
+related to the size of the files.</p>
+<div class="section level2">
+<h2 id="available-templates-for-pie_bake">Available templates for
+<strong><code>pie_bake()</code></strong><a class="anchor" aria-label="anchor" href="#available-templates-for-pie_bake"></a>
 </h2>
-<p>A fairly simple data frame with 5 groups will be considered. Percentages will be displayed (i.e. the argument <code>perc</code> will be fixed to <code>TRUE</code>), with the title corresponding to the template name and a generic group name (i.e. “groups”).</p>
-<p><em>The same for the</em> <strong><code><a href="../reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong> <em>function can be found by scrolling down.</em></p>
+<p>A fairly simple data frame with 5 groups will be considered.
+Percentages will be displayed (i.e. the argument <code>perc</code> will
+be fixed to <code>TRUE</code>), with the title corresponding to the
+template name and a generic group name (i.e. “groups”).</p>
+<p><em>The same for the</em>
+<strong><code><a href="../reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong> <em>function can be found
+by scrolling down.</em></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/">tastypie</a></span><span class="op">)</span>
-<span class="co">#&gt;             $$  $$  $$</span>
-<span class="co">#&gt;           __||__||__||__</span>
-<span class="co">#&gt;          | * * * * * * *|</span>
-<span class="co">#&gt;          |* * * * * * * |</span>
-<span class="co">#&gt;          | * * * * * * *|</span>
-<span class="co">#&gt;          |______________|</span>
-<span class="co">#&gt;  _              _              _</span>
-<span class="co">#&gt; | |_  ___  ___ | |_  _ _  ___ |_| ___</span>
-<span class="co">#&gt; |  _|| .'||_ -||  _|| | || . || || -_|</span>
-<span class="co">#&gt; |_|  |__,||___||_|  |_  ||  _||_||___|</span>
-<span class="co">#&gt;                     |___||_|</span>
-<span class="va">ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">65</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">pie_template_list</span><span class="op">)</span><span class="op">{</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/pie_bake.html">pie_bake</a></span><span class="op">(</span><span class="va">ex</span>, template <span class="op">=</span> <span class="va">i</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/" class="external-link">tastypie</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt;             $$  $$  $$</span></span>
+<span><span class="co">#&gt;           __||__||__||__</span></span>
+<span><span class="co">#&gt;          | * * * * * * *|</span></span>
+<span><span class="co">#&gt;          |* * * * * * * |</span></span>
+<span><span class="co">#&gt;          | * * * * * * *|</span></span>
+<span><span class="co">#&gt;          |______________|</span></span>
+<span><span class="co">#&gt;  _              _              _</span></span>
+<span><span class="co">#&gt; | |_  ___  ___ | |_  _ _  ___ |_| ___</span></span>
+<span><span class="co">#&gt; |  _|| .'||_ -||  _|| | || . || || -_|</span></span>
+<span><span class="co">#&gt; |_|  |__,||___||_|  |_  ||  _||_||___|</span></span>
+<span><span class="co">#&gt;                     |___||_|</span></span>
+<span><span class="va">ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">65</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">pie_template_list</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/pie_bake.html">pie_bake</a></span><span class="op">(</span><span class="va">ex</span>, template <span class="op">=</span> <span class="va">i</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-2-1.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-2.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-3.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-4.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-5.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-6.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-7.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-8.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-9.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-10.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-11.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-12.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-13.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-14.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-15.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-16.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-17.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-18.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-19.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-20.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-21.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-22.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-23.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-24.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-25.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-26.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-27.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-28.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-29.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-2-30.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 </div>
-<div id="available-templates-for-pie_bake_pro" class="section level2">
-<h2 class="hasAnchor">
-<a href="#available-templates-for-pie_bake_pro" class="anchor"></a>Available templates for <strong><code>pie_bake_pro()</code></strong>
+<div class="section level2">
+<h2 id="available-templates-for-pie_bake_pro">Available templates for
+<strong><code>pie_bake_pro()</code></strong><a class="anchor" aria-label="anchor" href="#available-templates-for-pie_bake_pro"></a>
 </h2>
-<p>Here we don’t have to set the argument <code>perc</code> (there are some templates that display percentages anyways).</p>
+<p>Here we don’t have to set the argument <code>perc</code> (there are
+some templates that display percentages anyways).</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">65</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">pie_template_list_pro</span><span class="op">)</span><span class="op">{</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span><span class="va">ex</span>, template <span class="op">=</span> <span class="va">i</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">ex</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">65</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">pie_template_list_pro</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span><span class="va">ex</span>, template <span class="op">=</span> <span class="va">i</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-3-1.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-2.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-3.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-4.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-5.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-6.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-7.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-8.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-9.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-10.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-11.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-12.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-13.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-14.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-15.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-16.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-17.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-18.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-19.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-20.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-21.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-22.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-23.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-24.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-25.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-3-26.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<pre><code>#&gt; NULL</code></pre>
+<pre><code><span><span class="co">#&gt; NULL</span></span></code></pre>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-3-27.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<pre><code>#&gt; NULL</code></pre>
+<pre><code><span><span class="co">#&gt; NULL</span></span></code></pre>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-3-28.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<pre><code>#&gt; NULL</code></pre>
+<pre><code><span><span class="co">#&gt; NULL</span></span></code></pre>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-3-29.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<pre><code>#&gt; NULL</code></pre>
+<pre><code><span><span class="co">#&gt; NULL</span></span></code></pre>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-3-30.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
-<pre><code>#&gt; NULL</code></pre>
+<pre><code><span><span class="co">#&gt; NULL</span></span></code></pre>
 </div>
-<div id="available-templates-for-bubble_blow" class="section level2">
-<h2 class="hasAnchor">
-<a href="#available-templates-for-bubble_blow" class="anchor"></a>Available templates for <strong><code>bubble_blow()</code></strong>
+<div class="section level2">
+<h2 id="available-templates-for-bubble_blow">Available templates for
+<strong><code>bubble_blow()</code></strong><a class="anchor" aria-label="anchor" href="#available-templates-for-bubble_blow"></a>
 </h2>
-<p>Below you can see the different templates available for the function <strong><code><a href="../reference/bubble_blow.html">bubble_blow()</a></code></strong> that allows the user to easily create cool circular packing charts.</p>
-<p>A fairly simple data frame with 10 groups will be considered. Percentages will be displayed below the group labels (i.e. the argument <code>perc</code> will be fixed to <code>below</code>), with the title corresponding to the template name.</p>
+<p>Below you can see the different templates available for the function
+<strong><code><a href="../reference/bubble_blow.html">bubble_blow()</a></code></strong> that allows the user to
+easily create cool circular packing charts.</p>
+<p>A fairly simple data frame with 10 groups will be considered.
+Percentages will be displayed below the group labels (i.e. the argument
+<code>perc</code> will be fixed to <code>below</code>), with the title
+corresponding to the template name.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">exblow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span>, <span class="fl">88</span>, <span class="fl">66</span>, <span class="fl">78</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="va">available_templates_bub</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"bub1"</span>, <span class="st">"bub2"</span>, <span class="st">"bub3"</span>, <span class="st">"bub4"</span>, <span class="st">"bub5"</span><span class="op">)</span>
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">available_templates_bub</span><span class="op">)</span><span class="op">{</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="va">i</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">exblow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span>, <span class="fl">88</span>, <span class="fl">66</span>, <span class="fl">78</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">available_templates_bub</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bub1"</span>, <span class="st">"bub2"</span>, <span class="st">"bub3"</span>, <span class="st">"bub4"</span>, <span class="st">"bub5"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="va">available_templates_bub</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="../reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="va">i</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-4-1.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-2.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-3.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-4.png" width="75%" height="75%" style="display: block; margin: auto;"><img src="available_templates_files/figure-html/unnamed-chunk-4-5.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 </div>
-<div id="example-of-usage-of-pie_addimages" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example-of-usage-of-pie_addimages" class="anchor"></a>Example of usage of <strong><code>pie_addimages()</code></strong>
+<div class="section level2">
+<h2 id="example-of-usage-of-pie_addimages">Example of usage of
+<strong><code>pie_addimages()</code></strong><a class="anchor" aria-label="anchor" href="#example-of-usage-of-pie_addimages"></a>
 </h2>
-<p>At first, let’s create a list of jpeg images loaded using the function <code>readJPEG</code> (for optimal and fast results, the use of small files is recommended) :</p>
+<p>At first, let’s create a list of jpeg images loaded using the
+function <code>readJPEG</code> (for optimal and fast results, the use of
+small files is recommended) :</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">img1</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"logo.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
-<span class="va">img2</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"parents.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
-<span class="va">img3</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"bob.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
-<span class="va">img4</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"mark.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span>
-<span class="va">imgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">img1</span>,<span class="va">img2</span>,<span class="va">img3</span>, <span class="va">img4</span><span class="op">)</span></code></pre></div>
-<p>Then, let’s create the ggplot object using <code><a href="../reference/pie_bake.html">pie_bake()</a></code> (without focusing on the template or other specifications, since only labels and values will be used):</p>
+<code class="sourceCode R"><span><span class="va">img1</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html" class="external-link">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"logo.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">img2</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html" class="external-link">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"parents.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">img3</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html" class="external-link">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"bob.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">img4</span> <span class="op">&lt;-</span> <span class="fu">jpeg</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/jpeg/man/readJPEG.html" class="external-link">readJPEG</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"img"</span>, <span class="st">"mark.jpeg"</span>, package<span class="op">=</span><span class="st">"tastypie"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">imgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">img1</span>,<span class="va">img2</span>,<span class="va">img3</span>, <span class="va">img4</span><span class="op">)</span></span></code></pre></div>
+<p>Then, let’s create the ggplot object using <code><a href="../reference/pie_bake.html">pie_bake()</a></code>
+(without focusing on the template or other specifications, since only
+labels and values will be used):</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mark fan"</span>, <span class="st">"My friend"</span>, <span class="st">"Tastypie logo"</span>, <span class="st">"My parents"</span><span class="op">)</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">250</span>, <span class="fl">225</span>, <span class="fl">325</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="va">mypie</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pie_bake.html">pie_bake</a></span><span class="op">(</span><span class="va">df</span>, template <span class="op">=</span> <span class="st">"basic1"</span><span class="op">)</span></code></pre></div>
-<p>Now it is possible to run p<strong><code><a href="../reference/pie_addimages.html">pie_addimages()</a></code></strong> using the list of the images and the created pie chart, selecting also the colours of the graph’s borders and labels:</p>
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Mark fan"</span>, <span class="st">"My friend"</span>, <span class="st">"Tastypie logo"</span>, <span class="st">"My parents"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">250</span>, <span class="fl">225</span>, <span class="fl">325</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">mypie</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/pie_bake.html">pie_bake</a></span><span class="op">(</span><span class="va">df</span>, template <span class="op">=</span> <span class="st">"basic1"</span><span class="op">)</span></span></code></pre></div>
+<p>Now it is possible to run
+p<strong><code><a href="../reference/pie_addimages.html">pie_addimages()</a></code></strong> using the list of the
+images and the created pie chart, selecting also the colours of the
+graph’s borders and labels:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/pie_addimages.html">pie_addimages</a></span><span class="op">(</span>
-  mypie <span class="op">=</span> <span class="va">mypie</span>,
-  imglist <span class="op">=</span> <span class="va">imgs</span>,
-  perc <span class="op">=</span> <span class="st">"below"</span>,
-  lbl_col <span class="op">=</span> <span class="st">"red"</span>,
-  border_col <span class="op">=</span> <span class="st">"grey"</span>
-<span class="op">)</span> </code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/pie_addimages.html">pie_addimages</a></span><span class="op">(</span></span>
+<span>  mypie <span class="op">=</span> <span class="va">mypie</span>,</span>
+<span>  imglist <span class="op">=</span> <span class="va">imgs</span>,</span>
+<span>  perc <span class="op">=</span> <span class="st">"below"</span>,</span>
+<span>  lbl_col <span class="op">=</span> <span class="st">"red"</span>,</span>
+<span>  border_col <span class="op">=</span> <span class="st">"grey"</span></span>
+<span><span class="op">)</span> </span></code></pre></div>
 <p><img src="available_templates_files/figure-html/unnamed-chunk-7-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 </div>
   </div>
@@ -228,11 +249,13 @@ Please note that the quality of the images is deliberately reduced compared to t
 
 
       <footer><div class="copyright">
-  <p>Developed by Paolo Dalena.</p>
+  <p></p>
+<p>Developed by Paolo Dalena.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -240,6 +263,8 @@ Please note that the quality of the images is deliberately reduced compared to t
 
   
 
+
+  
 
   </body>
 </html>

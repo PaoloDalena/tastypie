@@ -32,6 +32,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -44,23 +46,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">tastypie</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -83,7 +79,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/PaoloDalena/tastypie/">
+  <a href="https://github.com/PaoloDalena/tastypie/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -100,216 +96,226 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="tastypie--" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#tastypie--" class="anchor"></a>tastypie <a href="https://paolodalena.github.io/tastypie/"><img src="https://img.shields.io/badge/Check%20the%20super--tasty-WEB%20SITE-orangered.svg"></a> <img src="reference/figures/logo.png" align="right" height="139">
+<div class="section level1">
+<div class="page-header"><h1 id="tastypie--">tastypie <a href="https://paolodalena.github.io/tastypie/" class="external-link"><img src="https://img.shields.io/badge/Check%20the%20super--tasty-WEB%20SITE-orangered.svg"></a> <img src="reference/figures/logo.png" align="right" height="139"><a class="anchor" aria-label="anchor" href="#tastypie--"></a>
 </h1></div>
 <!-- badges: start -->
 
 <ul>
-<li>Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: <strong>check out what’s new in <a href="https://paolodalena.github.io/tastypie/">tastypie</a> <code>0.1.0</code></strong> <a href="https://paolodalena.github.io/tastypie/news/index.html">here</a>!</li>
-<li>Would you like to <strong>join the <a href="https://paolodalena.github.io/tastypie/">tastypie</a> crew and get a free <code>tasty_tshirt</code></strong>? Find out the details <a href="https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html">here</a>.</li>
+<li>Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: <strong>check out what’s new in <a href="https://paolodalena.github.io/tastypie/" class="external-link">tastypie</a> <code>0.1.0</code></strong> <a href="https://paolodalena.github.io/tastypie/news/index.html" class="external-link">here</a>!</li>
+<li>Would you like to <strong>join the <a href="https://paolodalena.github.io/tastypie/" class="external-link">tastypie</a> crew and get a free <code>tasty_tshirt</code></strong>? Find out the details <a href="https://paolodalena.github.io/tastypie/articles/tasty_tshirts.html" class="external-link">here</a>.</li>
 </ul>
-<p>You only need to type <em>“why pie charts are bad”</em> on <a href="https://www.google.com/search?q=why+pie+charts+are+bad">Google</a> to find thousands of articles full of (very valid) reasons why this type of chart should not be used.<br><a href="https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg">However</a>, my mother, a high school teacher of Latin and Italian Literature, swears she understands more from something like this:</p>
+<p>You only need to type <em>“why pie charts are bad”</em> on <a href="https://www.google.com/search?q=why+pie+charts+are+bad" class="external-link">Google</a> to find thousands of articles full of (very valid) reasons why this type of chart should not be used.<br><a href="https://github.com/PaoloDalena/tastypie/blob/main/meme.jpeg" class="external-link">However</a>, my mother, a high school teacher of Latin and Italian Literature, swears she understands more from something like this:</p>
 <p><img src="reference/figures/pie_readme.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>than from something like this:</p>
 <table class="table">
 <thead><tr>
 <th style="text-align:left;">
-<p>InYourOpinion</p>
+InYourOpinion
 </th>
 <th style="text-align:right;">
-<p>Value</p>
+Value
 </th>
 <th style="text-align:right;">
-<p>Proportion</p>
+Proportion
 </th>
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-<p>My mum</p>
+My mum
 </td>
 <td style="text-align:right;">
-<p>60</p>
+60
 </td>
 <td style="text-align:right;">
-<p>0.2</p>
+0.2
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-<p>Is</p>
+Is
 </td>
 <td style="text-align:right;">
-<p>90</p>
+90
 </td>
 <td style="text-align:right;">
-<p>0.3</p>
+0.3
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-<p>Strange?</p>
+Strange?
 </td>
 <td style="text-align:right;">
-<p>150</p>
+150
 </td>
 <td style="text-align:right;">
-<p>0.5</p>
+0.5
 </td>
 </tr>
 </tbody>
 </table>
 <p>Now, I love my mum, and I want her to be happy. Maybe there are other people in the world with this <em>particular problem</em>, so, why not help?<br>
 Due to the little use because of the already mentioned reasons, making pie (and related) charts in R is not straightforward, so it is necessary to have functions to simplify things.</p>
-<p>In this R package there are useful functions for making <strong>tasty pies</strong> exploiting some <a href="https://ggplot2.tidyverse.org/">ggplot2</a> features.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the released version of <a href="https://paolodalena.github.io/tastypie/">tastypie</a> from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<p>In this R package there are useful functions for making <strong>tasty pies</strong> exploiting some <a href="https://ggplot2.tidyverse.org/" class="external-link">ggplot2</a> features.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the released version of <a href="https://paolodalena.github.io/tastypie/" class="external-link">tastypie</a> from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tastypie"</span><span class="op">)</span></code></pre></div>
-<p>Or, you can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tastypie"</span><span class="op">)</span></span></code></pre></div>
+<p>Or, you can install the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"PaoloDalena/tastypie"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"PaoloDalena/tastypie"</span><span class="op">)</span></span></code></pre></div>
 <p>Then, you can attach to your session with:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/">tastypie</a></span><span class="op">)</span>
-<span class="co">#&gt;             $$  $$  $$</span>
-<span class="co">#&gt;           __||__||__||__</span>
-<span class="co">#&gt;          | * * * * * * *|</span>
-<span class="co">#&gt;          |* * * * * * * |</span>
-<span class="co">#&gt;          | * * * * * * *|</span>
-<span class="co">#&gt;          |______________|</span>
-<span class="co">#&gt;  _              _              _</span>
-<span class="co">#&gt; | |_  ___  ___ | |_  _ _  ___ |_| ___</span>
-<span class="co">#&gt; |  _|| .'||_ -||  _|| | || . || || -_|</span>
-<span class="co">#&gt; |_|  |__,||___||_|  |_  ||  _||_||___|</span>
-<span class="co">#&gt;                     |___||_|</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://paolodalena.github.io/tastypie/" class="external-link">tastypie</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt;             $$  $$  $$</span></span>
+<span><span class="co">#&gt;           __||__||__||__</span></span>
+<span><span class="co">#&gt;          | * * * * * * *|</span></span>
+<span><span class="co">#&gt;          |* * * * * * * |</span></span>
+<span><span class="co">#&gt;          | * * * * * * *|</span></span>
+<span><span class="co">#&gt;          |______________|</span></span>
+<span><span class="co">#&gt;  _              _              _</span></span>
+<span><span class="co">#&gt; | |_  ___  ___ | |_  _ _  ___ |_| ___</span></span>
+<span><span class="co">#&gt; |  _|| .'||_ -||  _|| | || . || || -_|</span></span>
+<span><span class="co">#&gt; |_|  |__,||___||_|  |_  ||  _||_||___|</span></span>
+<span><span class="co">#&gt;                     |___||_|</span></span></code></pre></div>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
-<p><strong><a href="https://paolodalena.github.io/tastypie/">tastypie</a></strong> allows the user to easily create many different pie charts based on different templates.</p>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
+<p><strong><a href="https://paolodalena.github.io/tastypie/" class="external-link">tastypie</a></strong> allows the user to easily create many different pie charts based on different templates.</p>
 <p>Using <strong><code><a href="reference/pie_bake.html">pie_bake()</a></code></strong> you just have to choose a template and if you want the proportions to be displayed in the plot or not (if you want, you can also set a title and a group name):</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a. Is"</span>, <span class="st">"b. Not"</span>, <span class="st">"c. The"</span>, <span class="st">"d. Only"</span>, <span class="st">"e. One"</span><span class="op">)</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2.9</span>, <span class="fl">6.9</span>, <span class="fl">4.20</span>, <span class="fl">13.12</span>, <span class="fl">6.66</span><span class="op">)</span>
-<span class="op">)</span>
-
-<span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"basic4"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,
-         title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a. Is"</span>, <span class="st">"b. Not"</span>, <span class="st">"c. The"</span>, <span class="st">"d. Only"</span>, <span class="st">"e. One"</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2.9</span>, <span class="fl">6.9</span>, <span class="fl">4.20</span>, <span class="fl">13.12</span>, <span class="fl">6.66</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"basic4"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>         title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-8-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"red1"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,
-         title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/pie_bake.html">pie_bake</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"red1"</span>, perc <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>         title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-8-2.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>Or, if you want something more extravagant (<em>but probably less understandable</em>), choose a template and try <strong><code><a href="reference/pie_bake_pro.html">pie_bake_pro()</a></code></strong>:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"dart5"</span>,
-             title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"dart5"</span>,</span>
+<span>             title <span class="op">=</span> <span class="st">"Perhaps"</span>, group_name <span class="op">=</span> <span class="st">"She"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"cirbar3"</span>, title <span class="op">=</span> <span class="st">"Perhaps she"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/pie_bake_pro.html">pie_bake_pro</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">example</span>, template <span class="op">=</span> <span class="st">"cirbar3"</span>, title <span class="op">=</span> <span class="st">"Perhaps she"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-9-2.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>Or, if you are interested in a circular packing chart, you can easily do it with the <strong><code>bubble_blow</code></strong> function:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">exblow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>,
-  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span>, <span class="fl">88</span>, <span class="fl">66</span>, <span class="fl">78</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="fu"><a href="reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="st">"bub2"</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="st">"Easy bubbles:"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">exblow</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  <span class="va">LETTERS</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">8</span><span class="op">]</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">33</span>, <span class="fl">24</span>, <span class="fl">54</span>, <span class="fl">12</span>, <span class="fl">43</span>, <span class="fl">88</span>, <span class="fl">66</span>, <span class="fl">78</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/bubble_blow.html">bubble_blow</a></span><span class="op">(</span><span class="va">exblow</span>, template <span class="op">=</span> <span class="st">"bub2"</span>, perc <span class="op">=</span> <span class="st">"below"</span>, title <span class="op">=</span> <span class="st">"Easy bubbles:"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>Not sure which template to choose? Run <strong><code><a href="reference/pie_discover.html">pie_discover()</a></code></strong> to find out a random combination of templates, number of groups and features and get an idea of the many available plots:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_discover.html">pie_discover</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/pie_discover.html">pie_discover</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-12-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>Want to display an example of a particular template with particular features? Try <strong><code><a href="reference/pie_templates.html">pie_templates()</a></code></strong>:</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/pie_templates.html">pie_templates</a></span><span class="op">(</span><span class="st">"eaten4"</span>, n_groups <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/pie_templates.html">pie_templates</a></span><span class="op">(</span><span class="st">"eaten4"</span>, n_groups <span class="op">=</span> <span class="fl">9</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-13-1.png" width="75%" height="75%" style="display: block; margin: auto;"></p>
 <p>Do you want a list of all the available templates? Check the <strong><code>pie_template_list</code></strong> and the <strong><code>pie_template_list_pro</code></strong> vectors!</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">pie_template_list</span> <span class="co"># to be used with pie_bake()</span>
-<span class="co">#&gt;  [1] "basic1"   "basic2"   "basic3"   "basic4"   "basic5"   "bw1"     </span>
-<span class="co">#&gt;  [7] "bw2"      "bw3"      "bw4"      "bw5"      "blue1"    "blue2"   </span>
-<span class="co">#&gt; [13] "blue3"    "blue4"    "blue5"    "red1"     "red2"     "red3"    </span>
-<span class="co">#&gt; [19] "red4"     "red5"     "rainbow1" "rainbow2" "rainbow3" "rainbow4"</span>
-<span class="co">#&gt; [25] "rainbow5" "donut1"   "donut2"   "donut3"   "donut4"   "donut5"</span>
-
-<span class="va">pie_template_list_pro</span> <span class="co"># to be used with pie_bake_pro()</span>
-<span class="co">#&gt;  [1] "eaten1"      "eaten2"      "eaten3"      "eaten4"      "eaten5"     </span>
-<span class="co">#&gt;  [6] "dart1"       "dart2"       "dart3"       "dart4"       "dart5"      </span>
-<span class="co">#&gt; [11] "eye1"        "eye2"        "eye3"        "eye4"        "eye5"       </span>
-<span class="co">#&gt; [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"</span>
-<span class="co">#&gt; [21] "cirbar1"     "cirbar2"     "cirbar3"     "cirbar4"     "cirbar5"    </span>
-<span class="co">#&gt; [26] "spider1"     "spider2"     "spider3"     "spider4"     "spider5"</span></code></pre></div>
-<p>Do you want to see all possible templates displayed? <a href="https://paolodalena.github.io/tastypie/articles/available_templates.html">Here</a> you can find what you are looking for.</p>
-<p>Do you want to add some images to your tasty pie chart? You can do it easily with <strong><code><a href="reference/pie_addimages.html">pie_addimages()</a></code></strong>! Check out an example of how to do it <a href="https://paolodalena.github.io/tastypie/articles/available_templates.html#example-of-usage-of-pie-addimages-">here</a>.</p>
+<code class="sourceCode R"><span><span class="va">pie_template_list</span> <span class="co"># to be used with pie_bake()</span></span>
+<span><span class="co">#&gt;  [1] "basic1"   "basic2"   "basic3"   "basic4"   "basic5"   "bw1"     </span></span>
+<span><span class="co">#&gt;  [7] "bw2"      "bw3"      "bw4"      "bw5"      "blue1"    "blue2"   </span></span>
+<span><span class="co">#&gt; [13] "blue3"    "blue4"    "blue5"    "red1"     "red2"     "red3"    </span></span>
+<span><span class="co">#&gt; [19] "red4"     "red5"     "rainbow1" "rainbow2" "rainbow3" "rainbow4"</span></span>
+<span><span class="co">#&gt; [25] "rainbow5" "donut1"   "donut2"   "donut3"   "donut4"   "donut5"</span></span>
+<span></span>
+<span><span class="va">pie_template_list_pro</span> <span class="co"># to be used with pie_bake_pro()</span></span>
+<span><span class="co">#&gt;  [1] "eaten1"      "eaten2"      "eaten3"      "eaten4"      "eaten5"     </span></span>
+<span><span class="co">#&gt;  [6] "dart1"       "dart2"       "dart3"       "dart4"       "dart5"      </span></span>
+<span><span class="co">#&gt; [11] "eye1"        "eye2"        "eye3"        "eye4"        "eye5"       </span></span>
+<span><span class="co">#&gt; [16] "watermelon1" "watermelon2" "watermelon3" "watermelon4" "watermelon5"</span></span>
+<span><span class="co">#&gt; [21] "cirbar1"     "cirbar2"     "cirbar3"     "cirbar4"     "cirbar5"    </span></span>
+<span><span class="co">#&gt; [26] "spider1"     "spider2"     "spider3"     "spider4"     "spider5"</span></span></code></pre></div>
+<p>Do you want to see all possible templates displayed? <a href="https://paolodalena.github.io/tastypie/articles/available_templates.html" class="external-link">Here</a> you can find what you are looking for.</p>
+<p>Do you want to add some images to your tasty pie chart? You can do it easily with <strong><code><a href="reference/pie_addimages.html">pie_addimages()</a></code></strong>! Check out an example of how to do it <a href="https://paolodalena.github.io/tastypie/articles/available_templates.html#example-of-usage-of-pie-addimages-" class="external-link">here</a>.</p>
 <p><strong>Be curious, there are many tasty pies!</strong></p>
 </div>
-<div id="feature-request" class="section level2">
-<h2 class="hasAnchor">
-<a href="#feature-request" class="anchor"></a>Feature request</h2>
-<p>If you need some more features, please tell me <a href="https://github.com/PaoloDalena/tastypie/issues">here</a>.</p>
+<div class="section level2">
+<h2 id="feature-request">Feature request<a class="anchor" aria-label="anchor" href="#feature-request"></a>
+</h2>
+<p>If you need some more features, please tell me <a href="https://github.com/PaoloDalena/tastypie/issues" class="external-link">here</a>.</p>
 </div>
-<div id="bug-reports" class="section level2">
-<h2 class="hasAnchor">
-<a href="#bug-reports" class="anchor"></a>Bug reports</h2>
-<p>If you encounter a bug, please file a <a href="https://github.com/tidyverse/reprex">reprex</a> (minimal reproducible example) <a href="https://github.com/PaoloDalena/tastypie/issues">here</a>.</p>
+<div class="section level2">
+<h2 id="bug-reports">Bug reports<a class="anchor" aria-label="anchor" href="#bug-reports"></a>
+</h2>
+<p>If you encounter a bug, please file a <a href="https://github.com/tidyverse/reprex" class="external-link">reprex</a> (minimal reproducible example) <a href="https://github.com/PaoloDalena/tastypie/issues" class="external-link">here</a>.</p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=tastypie">https://​cloud.r-project.org/​package=tastypie</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/PaoloDalena/tastypie/">https://​github.com/​PaoloDalena/​tastypie/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/PaoloDalena/tastypie/issues">https://​github.com/​PaoloDalena/​tastypie/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=tastypie" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing tastypie</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Paolo Dalena <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=tastypie"><img src="https://www.r-pkg.org/badges/version/tastypie" alt="CRAN status"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
-<li><a href="https://github.com/PaoloDalena/tastypie"><img src="https://img.shields.io/badge/devel%20version-0.1.0-darkolivegreen.svg"></a></li>
-<li><a href="https://cran.r-project.org/web/licenses/GPL-3"><img src="https://img.shields.io/badge/license-GPL--3-yellow.svg" alt="License: GPL-3"></a></li>
-<li><a href="https://github.com/PaoloDalena/tastypie"><img src="https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg"></a></li>
-<li><a href="https://github.com/PaoloDalena/tastypie/actions"><img src="https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://CRAN.R-project.org/package=tastypie" class="external-link"><img src="https://www.r-pkg.org/badges/version/tastypie" alt="CRAN status"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie" class="external-link"><img src="https://img.shields.io/badge/devel%20version-0.1.1-darkolivegreen.svg"></a></li>
+<li><a href="https://cran.r-project.org/web/licenses/GPL-3" class="external-link"><img src="https://img.shields.io/badge/license-GPL--3-yellow.svg" alt="License: GPL-3"></a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie" class="external-link"><img src="https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg"></a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie/actions" class="external-link"><img src="https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Paolo Dalena.</p>
+  <p></p>
+<p>Developed by Paolo Dalena.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -317,6 +323,8 @@ Due to the little use because of the already mentioned reasons, making pie (and 
 
   
 
+
+  
 
   </body>
 </html>
