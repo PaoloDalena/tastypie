@@ -27,7 +27,6 @@ Imports:
     scales,
     RColorBrewer,
     shadowtext,
-    tibble,
     packcircles,
     fmsb
 Depends: 
@@ -37,6 +36,7 @@ Suggests:
     markdown,
     rmarkdown,
     testthat (>= 3.0.0),
+    tibble,
     jpeg,
     patternplot
 VignetteBuilder: knitr
