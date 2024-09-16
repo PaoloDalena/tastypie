@@ -61,8 +61,6 @@
 #'   )
 #'
 #'
-#' @importFrom dplyr arrange
-#' @importFrom dplyr desc
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom shadowtext geom_shadowtext
 #' @importFrom fmsb radarchart
@@ -93,7 +91,7 @@ pie_bake_pro <- function(
 
   # initial setup
   names(data) <- c("group", "value")
-  data_n <- arrange(data, desc(group))
+  data_n <- data[order(data$group, decreasing = TRUE),,drop = FALSE]
   data_n[,2] <- round(data_n[,2]/sum(data_n[,2])*100, 0)
 
   # eaten ------
