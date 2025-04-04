@@ -5,7 +5,8 @@ Authors@R:
     person(given = "Paolo",
            family = "Dalena",
            role = c("aut", "cre"),
-           email = "paolodalena97@gmail.com")
+           email = "paolodalena97@gmail.com",
+           comment = c(ORCID = "0000-0003-2920-9572"))
 Description: You only need to type 'why pie charts are bad' on Google to find
     thousands of articles full of (valid) reasons why other types of charts 
     should be preferred over this one.
