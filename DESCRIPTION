@@ -17,6 +17,7 @@ Description: You only need to type 'why pie charts are bad' on Google to find
     immediately by exploiting the many cool templates provided.
 License: GPL-3
 URL: https://paolodalena.github.io/tastypie/
+DOI: 10.32614/cran.package.tastypie
 BugReports: https://github.com/PaoloDalena/tastypie/issues
 Encoding: UTF-8
 LazyData: true
