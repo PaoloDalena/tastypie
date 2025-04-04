@@ -1,9 +1,8 @@
-pandoc: 2.19.2
-pkgdown: 2.0.7
+pandoc: 3.1.11
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   available_templates: available_templates.html
   tasty_tshirts: tasty_tshirts.html
   your_favourite_template: your_favourite_template.html
-last_built: 2023-09-07T15:08Z
-
+last_built: 2025-04-04T15:40Z
