@@ -14,6 +14,7 @@ GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-p
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.32614/cran.package.tastypie.svg)](https://doi.org/10.32614/cran.package.tastypie)
 <!-- badges: end -->
 
 - Add figures to the pie charts, easily create circular packing charts,
