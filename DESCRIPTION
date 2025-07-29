@@ -1,6 +1,6 @@
 Package: tastypie
 Title: Easy Pie Charts
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person(given = "Paolo",
            family = "Dalena",
@@ -16,7 +16,7 @@ Description: You only need to type 'why pie charts are bad' on Google to find
     In this R package there are useful functions to make 'tasty' pie charts 
     immediately by exploiting the many cool templates provided.
 License: GPL-3
-URL: https://paolodalena.github.io/tastypie/
+URL: https://paolodalena.github.io/tastypie/, https://github.com/PaoloDalena/tastypie
 DOI: 10.32614/cran.package.tastypie
 BugReports: https://github.com/PaoloDalena/tastypie/issues
 Encoding: UTF-8
