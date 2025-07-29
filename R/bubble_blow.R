@@ -107,7 +107,7 @@ bubble_blow <- function(
 
   if(template == "bub1"){
     ggplot() +
-       geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "black", alpha = 1, size=1) +
+       geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "black", alpha = 1, linewidth =1) +
        scale_fill_distiller(palette = "Set3", direction = 1 ) +
        geom_label(data = data, aes(x, y, size=value, label = group), family = "mono") +
        scale_size_continuous(range = c(2, 5)) +
@@ -123,7 +123,7 @@ bubble_blow <- function(
   else if(template == "bub2"){
     ggplot() +
     # Make the bubbles
-    geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "white", alpha = 2, size=2) +
+    geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "white", alpha = 2, linewidth = 2) +
       scale_fill_distiller(palette = "Spectral", direction = 1 ) +
       # Add text in the center of each bubble + control its size
       geom_label(data = data, aes(x, y, size=value, label = group, fill = value), family = "mono") +
@@ -139,7 +139,7 @@ bubble_blow <- function(
   }
   else if(template == "bub3"){
     ggplot() +
-      geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "darkred", alpha = 1, size=1) +
+      geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "darkred", alpha = 1, linewidth = 1) +
       scale_fill_distiller(palette = "Oranges", direction = 1 ) +
       geom_label(data = data, aes(x, y, size=value, label = group), colour = "darkred", family = "mono") +
       scale_size_continuous(range = c(2, 5)) +
@@ -155,7 +155,7 @@ bubble_blow <- function(
 
   else if(template == "bub4"){
     ggplot() +
-      geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "black", alpha = 2, size = 2) +
+      geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "black", alpha = 2, linewidth = 2) +
       scale_fill_distiller(palette = "Greys", direction = 1 ) +
       geom_label(data = data, aes(x, y, size=value, label = group), family = "mono") +
       scale_size_continuous(range = c(2, 5)) +
@@ -171,7 +171,7 @@ bubble_blow <- function(
   }
   else if(template == "bub5"){
     ggplot() +
-      geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "white", alpha = 1, size = 1) +
+      geom_polygon(data = dat.gg, aes(x, y, group = id, fill=value), colour = "white", alpha = 1, linewidth = 1) +
       scale_fill_distiller(palette = "Paired", direction = 1 ) +
       geom_label(data = data, aes(x, y, size=value, label = group), family = "mono") +
       scale_size_continuous(range = c(2, 5)) +
