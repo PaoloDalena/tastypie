@@ -34,5 +34,5 @@ test_that("ex_groups gives an error when the number of groups is wrong", {
 
 test_that("pie discover works properly", {
   b <- pie_discover("bake")
-  expect_match(class(b), "gg")
+  expect_true(is_ggplot(b))
 })

@@ -10,21 +10,16 @@ test_that("data_check is properly linked", {
   expect_error(pie_bake_pro(a, template = "eye2"), "second variable")
 })
 
-test_that("output has 'list' type", {
-  a <- data.frame(letters[1:3], 1:3)
-  expect_type(pie_bake_pro(a, template = "dart1"), "list")
-  expect_type(pie_bake_pro(a, template = "dart3", title = "tt"), "list")
-})
-
 test_that("output is a 'ggplot' object", {
   a <- data.frame(letters[1:3], 1:3)
-  expect_match(class(pie_bake_pro(a, template = "eaten3")), "gg")
-  expect_match(class(pie_bake_pro(a, template = "eaten1", title = "gg")), "gg")
-  expect_match(class(pie_bake_pro(a, template = "cirbar1", title = "prova")), "gg")
-  expect_match(class(pie_bake_pro(a, template = "cirbar2")), "gg")
-  expect_match(class(pie_bake_pro(a, template = "cirbar3", title = "ciao")), "gg")
-  expect_match(class(pie_bake_pro(a, template = "cirbar4", title = "nop")), "gg")
-  expect_match(class(pie_bake_pro(a, template = "cirbar5")), "gg")
+
+  expect_true(is_ggplot(pie_bake_pro(a, template = "eaten3")))
+  expect_true(is_ggplot(pie_bake_pro(a, template = "eaten1", title = "gg")))
+  expect_true(is_ggplot(pie_bake_pro(a, template = "cirbar1", title = "prova")))
+  expect_true(is_ggplot(pie_bake_pro(a, template = "cirbar2", title = "yo")))
+  expect_true(is_ggplot(pie_bake_pro(a, template = "cirbar3", title = "ciao")))
+  expect_true(is_ggplot(pie_bake_pro(a, template = "cirbar4", title = "forzainter")))
+  expect_true(is_ggplot(pie_bake_pro(a, template = "cirbar5")))
 })
 
 test_that("output is NULL when the template is a spider chart", {
@@ -57,9 +52,9 @@ test_that("also tibbles can be baked", {
   a <- data.frame(letters[1:3], 1:3)
   b <- tibble::tibble(letters[1:5], 1:5)
   c <- tibble::tibble(letters[1:5], c(4.3, 2.2, 1, 2, 3.0))
-  expect_match(class(pie_bake_pro(tibble::as_tibble(a), template = "dart2")), "gg")
-  expect_match(class(pie_bake_pro(b, template = "dart4")), "gg")
-  expect_match(class(pie_bake_pro(c, template = "dart5")), "gg")
+  expect_true(is_ggplot(pie_bake_pro(tibble::as_tibble(a), template = "dart2")))
+  expect_true(is_ggplot(pie_bake_pro(b, template = "dart4")))
+  expect_true(is_ggplot(pie_bake_pro(c, template = "dart5")))
 })
 
 

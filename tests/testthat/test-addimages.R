@@ -15,6 +15,6 @@ test_that("output is a 'ggplot' object and title specification", {
     title = "Example"
   )
 
-  expect_match(class(imgpie), "gg")
+  expect_true(is_ggplot(imgpie))
   expect_match(imgpie$labels$title, "Example")
 })
