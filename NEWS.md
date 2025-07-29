@@ -1,5 +1,9 @@
+# tastypie 0.1.2
+* Minor fixes in ggplot2 functions
+* Fixed ggplot2 new version [reverse dependency ggplot class issue](https://github.com/tidyverse/ggplot2/issues/6498) ([#7](https://github.com/PaoloDalena/tastypie/issues/7))
+
 # tastypie 0.1.1
-* Updated tastypie-package documentation as requesed by R-project community (manually added aliases)
+* Updated tastypie-package documentation as requested by R-project community (manually added aliases)
 
 # tastypie 0.1.0
 
@@ -10,7 +14,7 @@
 
 # tastypie 0.0.3
 
-* Now `{tastypie}` is `tibble`-friendly: the user can also provide a `tibble` instead of a `dataframe` for the available functions. (#1)
+* Now `{tastypie}` is `tibble`-friendly: the user can also provide a `tibble` instead of a `dataframe` for the available functions. ([#1](https://github.com/PaoloDalena/tastypie/issues/1))
 * Improved the documentations of `pie_bake` and `pie_bake_pro`(added useful information about the labels and the `tibble` input).
 * Solved the CRAN issue related to the importing of the `magrittr` package that is not actually used.
 
