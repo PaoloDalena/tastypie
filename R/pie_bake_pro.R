@@ -76,9 +76,7 @@ pie_bake_pro <- function(
   # useful checks:
   pie_datacheck(data)
 
-  if(tibble::is_tibble(data)){
-    data <- as.data.frame(data)
-  }
+  data <- as.data.frame(data)
 
   if(template %in% pie_template_list){
     stop("\n The selected template must be used with the function pie_bake().

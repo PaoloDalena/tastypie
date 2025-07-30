@@ -61,9 +61,7 @@ bubble_blow <- function(
   # useful checks:
   pie_datacheck(data)
 
-  if(tibble::is_tibble(data)){
-    data <- as.data.frame(data)
-  }
+  data <- as.data.frame(data)
 
   names(data) <- c("group", "value")
 
