@@ -8,13 +8,16 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![](https://img.shields.io/badge/devel%20version-0.1.1-darkolivegreen.svg)](https://github.com/PaoloDalena/tastypie)
+[![](https://img.shields.io/badge/devel%20version-0.1.2-darkolivegreen.svg)](https://github.com/PaoloDalena/tastypie)
 [![License:
 GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-project.org/web/licenses/GPL-3)
 [![](https://img.shields.io/github/languages/code-size/PaoloDalena/tastypie.svg)](https://github.com/PaoloDalena/tastypie)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.32614/cran.package.tastypie.svg)](https://doi.org/10.32614/cran.package.tastypie)
+[![](https://cranlogs.r-pkg.org/badges/tastypie)](https://cran.rstudio.com/web/packages/tastypie/index.html)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/tastypie)](https://cranlogs.r-pkg.org/badges/grand-total/tastypie)
+
 <!-- badges: end -->
 
 - Add figures to the pie charts, easily create circular packing charts,
@@ -38,54 +41,91 @@ she understands more from something like this:
 than from something like this:
 
 <table>
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;">
+
 InYourOpinion
 </th>
+
 <th style="text-align:right;">
+
 Value
 </th>
+
 <th style="text-align:right;">
+
 Proportion
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 My mum
 </td>
+
 <td style="text-align:right;">
+
 60
 </td>
+
 <td style="text-align:right;">
+
 0.2
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 Is
 </td>
+
 <td style="text-align:right;">
+
 90
 </td>
+
 <td style="text-align:right;">
+
 0.3
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 Strange?
 </td>
+
 <td style="text-align:right;">
+
 150
 </td>
+
 <td style="text-align:right;">
+
 0.5
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 Now, I love my mum, and I want her to be happy. Maybe there are other
@@ -184,6 +224,13 @@ exblow <- data.frame(
   c(33, 24, 54, 12, 43, 88, 66, 78)
 )
 bubble_blow(exblow, template = "bub2", perc = "below", title = "Easy bubbles:")
+#> Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+#> ℹ Please use `linewidth` instead.
+#> ℹ The deprecated feature was likely used in the tastypie package.
+#>   Please report the issue at <https://github.com/PaoloDalena/tastypie/issues>.
+#> This warning is displayed once every 8 hours.
+#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+#> generated.
 ```
 
 <img src="man/figures/README-unnamed-chunk-10-1.png" width="75%" height="75%" style="display: block; margin: auto;" />

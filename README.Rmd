@@ -26,6 +26,9 @@ library(knitr)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.32614/cran.package.tastypie.svg)](https://doi.org/10.32614/cran.package.tastypie)
+[![](https://cranlogs.r-pkg.org/badges/tastypie)](https://cran.rstudio.com/web/packages/tastypie/index.html)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/tastypie)](https://cranlogs.r-pkg.org/badges/grand-total/tastypie)
+
 <!-- badges: end -->
 
 * Add figures to the pie charts, easily create circular packing charts, radar charts and circular barplots: **check out what's new in `{tastypie}` `0.1.0`** [here](https://paolodalena.github.io/tastypie/news/index.html)!
