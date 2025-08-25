@@ -15,7 +15,7 @@ GPL-3](https://img.shields.io/badge/license-GPL--3-yellow.svg)](https://cran.r-p
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/workflows/R-CMD-check/badge.svg)](https://github.com/PaoloDalena/tastypie/actions)
 [![R-CMD-check](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PaoloDalena/tastypie/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.32614/cran.package.tastypie.svg)](https://doi.org/10.32614/cran.package.tastypie)
-[![](https://cranlogs.r-pkg.org/badges/tastypie)](https://cran.rstudio.com/web/packages/tastypie/index.html)
+[![](https://cranlogs.r-pkg.org/badges/tastypie)](https://CRAN.R-project.org/package=tastypie)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/tastypie)](https://cranlogs.r-pkg.org/badges/grand-total/tastypie)
 
 <!-- badges: end -->
